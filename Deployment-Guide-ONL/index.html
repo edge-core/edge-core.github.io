@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Deployment Guide - Open Network Linux, ONL | Engineer Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Getting Started
+Check the ONL compatible switch
+Choose the ONL installer version
+Accton/Edgecore have difference CPU type
+Intel - x86
+FreeScale - powerpc, ppc 
+
+
+
+
+Install ONL into Edgecore switch vi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Deployment Guide - Open Network Linux, ONL">
+<meta property="og:url" content="http://edge-core.github.io/Deployment-Guide-ONL/index.html">
+<meta property="og:site_name" content="Engineer Blog">
+<meta property="og:description" content="Getting Started
+Check the ONL compatible switch
+Choose the ONL installer version
+Accton/Edgecore have difference CPU type
+Intel - x86
+FreeScale - powerpc, ppc 
+
+
+
+
+Install ONL into Edgecore switch vi">
+<meta property="og:image" content="https://opennetlinux.org/opennetlinux.png">
+<meta property="og:updated_time" content="2017-03-05T11:31:30.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Deployment Guide - Open Network Linux, ONL">
+<meta name="twitter:description" content="Getting Started
+Check the ONL compatible switch
+Choose the ONL installer version
+Accton/Edgecore have difference CPU type
+Intel - x86
+FreeScale - powerpc, ppc 
+
+
+
+
+Install ONL into Edgecore switch vi">
+<meta name="twitter:image" content="https://opennetlinux.org/opennetlinux.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Engineer Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-92782610-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Engineer Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Freedom, Control, Innovation</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <a id="nav-github-link" class="nav-icon" href="https://github.com/edge-core"></a>$
+        <a id="nav-linkedin-link" class="nav-icon" href="https://www.linkedin.com/company-beta/1692901"></a>$
+        <a id="nav-twitter-link" class="nav-icon" href="https://twitter.com/EdgeCoreNetwork"></a>$        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://edge-core.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Deployment-Guide-ONL" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/Deployment-Guide-ONL/" class="article-date">
+  <time datetime="2017-03-05T11:31:30.000Z" itemprop="datePublished">2017-03-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Deployment Guide - Open Network Linux, ONL
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="https://opennetlinux.org/opennetlinux.png" width="300" height="400">
+<h2 id="Getting-Started"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started</h2><ol>
+<li>Check the <a href="http://opennetlinux.org/hcl" target="_blank" rel="external">ONL compatible switch</a></li>
+<li>Choose the <a href="http://opennetlinux.org/binaries" target="_blank" rel="external">ONL installer version</a><ul>
+<li>Accton/Edgecore have difference CPU type<ul>
+<li>Intel - x86</li>
+<li>FreeScale - powerpc, ppc </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Install ONL into Edgecore switch via ONIE</li>
+<li>Login ONL</li>
+<li>Do anything you want to on ONL</li>
+</ol>
+<h2 id="Preinstall-ONL"><a href="#Preinstall-ONL" class="headerlink" title="Preinstall ONL"></a>Preinstall ONL</h2><ul>
+<li><p>We suggest you that choose ONL version <a href="http://opennetlinux.org/binaries/2016.12.22.18.28.604af0c9b3dc9504870c30273ab22f2fb62746c3" target="_blank" rel="external"><code>2016.12.22.18.28.604af0c9b3dc9504870c30273ab22f2fb62746c3</code></a> and choose <code>Debian 8</code></p>
+<ul>
+<li>For PowerPC, use <a href="http://opennetlinux.org/binaries/2016.12.22.18.28.604af0c9b3dc9504870c30273ab22f2fb62746c3/ONL-2.0.0-ONL-OS-DEB8-2016-12-22.1828-604af0c-PPC-INSTALLED-INSTALLER" target="_blank" rel="external">ONL-2.0.0-ONL-OS-DEB8-2016-12-22.1828-604af0c-PPC-INSTALLED-INSTALLER</a></li>
+<li>For x86 based, use <a href="http://opennetlinux.org/binaries/2016.12.22.18.28.604af0c9b3dc9504870c30273ab22f2fb62746c3/ONL-2.0.0-ONL-OS-DEB8-2016-12-22.1828-604af0c-AMD64-INSTALLED-INSTALLER" target="_blank" rel="external">ONL-2.0.0-ONL-OS-DEB8-2016-12-22.1828-604af0c-AMD64-INSTALLED-INSTALLER</a></li>
+</ul>
+</li>
+<li><p>Download ONL installer images into USB or follow the <a href="https://github.com/opencomputeproject/onie/wiki/Quick-Start-Guide" target="_blank" rel="external">Quick Start Guide - ONIE</a></p>
+</li>
+</ul>
+<a id="more"></a>
+<h2 id="Enter-ONIE-Rescue-Mode"><a href="#Enter-ONIE-Rescue-Mode" class="headerlink" title="Enter ONIE (Rescue Mode)"></a>Enter ONIE (Rescue Mode)</h2><ul>
+<li>If the bootloader is GRUB<ul>
+<li>Select <code>ONIE -&gt; ONIE: Rescue</code></li>
+</ul>
+</li>
+<li>If the bootloader is U-Boot<ul>
+<li>You will see <code>Hit any key to stop autoboot</code></li>
+<li><code>Press any key</code> </li>
+<li>Enter <code>run onie_rescue</code> to enter ONIE rescue mode.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Install-ONL-Example-Accton-Edgecore-AS5712-54X"><a href="#Install-ONL-Example-Accton-Edgecore-AS5712-54X" class="headerlink" title="Install ONL (Example: Accton/Edgecore AS5712-54X)"></a>Install ONL (Example: Accton/Edgecore AS5712-54X)</h2><ul>
+<li><p>Install via HTTP</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">ifconfig eth0 &lt;IP&gt;/24</div><div class="line">route add default gw &lt;Gateway&gt;</div><div class="line"><span class="built_in">echo</span> <span class="string">"nameserver 8.8.8.8"</span> &gt; /etc/resolv.conf</div><div class="line">onie-nos-install http://opennetlinux.org/binaries/2016.12.22.18.28.604a</div><div class="line">f0c9b3dc9504870c30273ab22f2fb62746c3/ONL-2.0.0-ONL-OS-DEB8-2016-12-22.1828-604af</div><div class="line">0c-AMD64-INSTALLED-INSTALLER</div></pre></td></tr></table></figure>
+</li>
+<li><p>Install via USB</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">mkdir /tmp/onie-image</div><div class="line">mount /dev/&lt;USB Devices&gt; /tmp/onie-image</div><div class="line"><span class="built_in">cd</span> /tmp/onie-image</div><div class="line">onie-nos-install ONL-2.0.0-ONL-OS-DEB8-2016-12-22.1828-604af</div><div class="line">0c-AMD64-INSTALLED-INSTALLER</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Default-Username-and-Password-in-ONL"><a href="#Default-Username-and-Password-in-ONL" class="headerlink" title="Default Username and Password in ONL"></a>Default Username and Password in ONL</h2><p><code>root/onl</code></p>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><ul>
+<li><p>Output with AS5712-54X and ONIE rescure mode</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line">GRUB loading.                                               Version   : 2015.11.00.05</div><div class="line">Build Date: 2016-04-14T19:55+0800</div><div class="line">               Info: Mounting kernel filesystems... done.</div><div class="line">scsi 6:0:0:0: Direct-Access              USB DISK 2.0     PMAP PQ: 0 ANSI: 6</div><div class="line">sd 6:0:0:0: [sda] 15466496 512-byte logical blocks: (7.91 GB/7.37 GiB)</div><div class="line">sd 6:0:0:0: [sda] Write Protect is off</div><div class="line">sd 6:0:0:0: [sda] Write cache: disabled, <span class="built_in">read</span> cache: enabled, doesn<span class="string">''</span>t support DPO or FUA</div><div class="line">sd 6:0:0:0: [sda] Attached SCSI disk</div><div class="line">Info: Mounting ONIE-BOOT on /mnt/onie-boot ...</div><div class="line">Info: Using eth0 MAC address: c4:39:3a:f4:4b:f3</div><div class="line">Info: eth0:  Checking link... up.E: Rescue Mode ...</div><div class="line">Info: Trying DHCPv4 on interface: eth0</div><div class="line">random: nonblocking pool is initialized</div><div class="line">Warning: Unable to configure interface using DHCPv4: eth0</div><div class="line">ONIE: Using default IPv4 addr: eth0: 192.168.3.10/24</div><div class="line">ONIE: Using link-local IPv4 addr: eth0: 169.254.187.20/16</div><div class="line">Starting: dropbear ssh daemon... done.</div><div class="line">Starting: telnetd... done.</div><div class="line">discover: Rescue mode detected.  Installer disabled.</div><div class="line"></div><div class="line">Please press Enter to activate this console.</div><div class="line">To check the install status inspect /var/<span class="built_in">log</span>/onie.log.</div><div class="line">Try this:  tail <span class="_">-f</span> /var/<span class="built_in">log</span>/onie.log</div><div class="line"></div><div class="line">** Rescue Mode Enabled **</div><div class="line"></div><div class="line">ONIE:/ <span class="comment"># # Install via HTTP</span></div><div class="line">ONIE:/ <span class="comment"># ifconfig eth0 192.168.11.9/24</span></div><div class="line">ONIE:/ <span class="comment"># route add default gw 192.168.11.254</span></div><div class="line">ONIE:/ <span class="comment"># echo "nameserver 8.8.8.8" &gt; /etc/resolv.conf</span></div><div class="line">ONIE:/ <span class="comment"># ping www.google.com</span></div><div class="line">PING www.google.com (216.58.200.36): 56 data bytes</div><div class="line">64 bytes from 216.58.200.36: seq=0 ttl=53 time=7.485 ms</div><div class="line">--- www.google.com ping statistics ---</div><div class="line">1 packets transmitted, 1 packets received, 0% packet loss</div><div class="line">round-trip min/avg/max = 7.485/7.485/7.485 ms</div><div class="line">ONIE:/ <span class="comment"># </span></div><div class="line">ONIE:/ <span class="comment"># onie-nos-install http://opennetlinux.org/binaries/2016.12.22.18.28.604a</span></div><div class="line">f0c9b3dc9504870c30273ab22f2fb62746c3/ONL-2.0.0-ONL-OS-DEB8-2016-12-22.1828-604af</div><div class="line">0c-AMD64-INSTALLED-INSTALLER</div><div class="line"></div><div class="line">ONIE:/ <span class="comment"># # Install via USB</span></div><div class="line">ONIE:/ <span class="comment"># mkdir /tmp/onie-image</span></div><div class="line">ONIE:/ <span class="comment"># mount /dev/sdb1 /tmp/onie-image</span></div><div class="line">ONIE:/ <span class="comment"># cd /tmp/onie-image</span></div><div class="line">ONIE:/tmp/onie-image <span class="comment"># onie-nos-install ONL-2.0.0-ONL-OS-DEB8-2016-12-22.1828-604af</span></div><div class="line">0c-AMD64-INSTALLED-INSTALLER</div><div class="line"></div><div class="line">ONIE: Executing installer: ONL-2.0.0-ONL-OS-DEB8-2016-12-22.1828-604af0c-AMD64-INSTALLED-INSTALLER         [4/2367]</div><div class="line">installer: computing checksum of original archive</div><div class="line">installer: checksum is OK</div><div class="line">installer: extracting pad</div><div class="line">...(Skip)</div></pre></td></tr></table></figure>
+</li>
+<li><p>Booting Output with AS5712-54X and ONL</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">2017-03-05 12:38:43.418 INFO     onie-upgrade: ************************************************************</div><div class="line">2017-03-05 12:38:43.418 INFO     onie-upgrade: * ONIE Upgrade Check</div><div class="line">2017-03-05 12:38:43.418 INFO     onie-upgrade: ************************************************************</div><div class="line">2017-03-05 12:38:43.418 INFO     onie-upgrade:</div><div class="line">2017-03-05 12:38:43.418 INFO     onie-upgrade:</div><div class="line">2017-03-05 12:38:43.418 INFO     onie-upgrade: No ONIE updater available <span class="keyword">for</span> the current platform.</div><div class="line">2017-03-05 12:38:43.419 INFO     onie-upgrade:</div><div class="line">2017-03-05 12:38:43.419 INFO     onie-upgrade: ************************************************************</div><div class="line">2017-03-05 12:38:43.853 INFO firmware-upgrade: ************************************************************</div><div class="line">2017-03-05 12:38:43.853 INFO firmware-upgrade: * Firmware Upgrade Check</div><div class="line">2017-03-05 12:38:43.853 INFO firmware-upgrade: ************************************************************</div><div class="line">2017-03-05 12:38:43.853 INFO firmware-upgrade:</div><div class="line">2017-03-05 12:38:43.854 INFO firmware-upgrade:</div><div class="line">2017-03-05 12:38:43.854 INFO firmware-upgrade: No Firmware updater available <span class="keyword">for</span> the current platform.</div><div class="line">2017-03-05 12:38:43.854 INFO firmware-upgrade:</div><div class="line">2017-03-05 12:38:43.854 INFO firmware-upgrade: ************************************************************</div><div class="line">2017-03-05 12:38:44.329 INFO   loader-upgrade: ************************************************************</div><div class="line">2017-03-05 12:38:44.330 INFO   loader-upgrade: * Loader Upgrade Check</div><div class="line">2017-03-05 12:38:44.330 INFO   loader-upgrade: ************************************************************</div><div class="line">2017-03-05 12:38:44.330 INFO   loader-upgrade:</div><div class="line">2017-03-05 12:38:44.353 INFO   loader-upgrade: Current Loader Version: ONL-2.0.0,2016-12-22.18:28-604af0c</div><div class="line">2017-03-05 12:38:44.353 INFO   loader-upgrade:    Next Loader Version: ONL-2.0.0,2016-12-22.18:28-604af0c</div><div class="line">2017-03-05 12:38:44.353 INFO   loader-upgrade:</div><div class="line">2017-03-05 12:38:44.354 INFO   loader-upgrade: Loader version ONL-2.0.0,2016-12-22.18:28-604af0c is current.</div><div class="line">2017-03-05 12:38:44.354 INFO   loader-upgrade:</div><div class="line">2017-03-05 12:38:44.354 INFO   loader-upgrade: ************************************************************</div><div class="line">Using makefile-style concurrent boot <span class="keyword">in</span> runlevel S.</div><div class="line">Starting the hotplug events dispsystemd-udevd[1080]: starting version 215</div><div class="line">atcher: udevd.</div><div class="line">Synthesizing the initial hotplug events...done.</div><div class="line">Waiting <span class="keyword">for</span> /dev to be fully populated...done.</div><div class="line">Setting kernel variables ...done.</div><div class="line">Setting up resolvconf...done.</div><div class="line">Configuring network interfaces...done.</div><div class="line">INIT: Entering runlevel: 2</div><div class="line">Using makefile-style concurrent boot <span class="keyword">in</span> runlevel 2.</div><div class="line">Starting enhanced syslogd: rsyslogd.</div><div class="line">Starting ONLP SNMP Agent: onlp-snmpd.</div><div class="line">Starting ONLP Platform Agent: onlpd.</div><div class="line">Starting Fault Agent: faultd.</div><div class="line">Starting OpenBSD Secure Shell server: sshd.</div><div class="line">Starting SNMP services::  snmpdWarning: Could not probe <span class="keyword">for</span> any interfaces</div><div class="line">Stopping watchdog keepalive daemon....</div><div class="line">Starting watchdog daemon....</div><div class="line"></div><div class="line">Open Network Linux OS ONL-2.0.0, 2016-12-22.18:28-604af0c</div><div class="line"></div><div class="line">localhost login: root</div><div class="line">Password: onl</div><div class="line">Linux localhost 3.2.65-1+deb7u2-OpenNetworkLinux <span class="comment">#2 SMP Thu Dec 22 19:17:39 UTC 2016 x86_64</span></div><div class="line">root@localhost:~<span class="comment">#</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Call-for-Support"><a href="#Call-for-Support" class="headerlink" title="Call for Support"></a>Call for Support</h2><p>If you still meet a problem, please follow the link <a href="https://edge-core.github.io/2017/02/09/Call-for-Support-ONIE/">Call for Support - ONIE</a></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://opennetlinux.org/docs/deploy" target="_blank" rel="external">ONL Deployment Guide</a></li>
+<li><a href="http://opennetlinux.org/hcl" target="_blank" rel="external">ONL Hardware Support</a></li>
+<li><a href="http://opennetlinux.org/binaries" target="_blank" rel="external">ONL Binaries</a></li>
+<li><a href="https://wiki.opencord.org/display/CORD/Hardware+Switch+Installation+Guide" target="_blank" rel="external">Hardware Switch Installation Guide - OpenCORD</a></li>
+<li><a href="https://github.com/opencomputeproject/onie/wiki/Quick-Start-Guide" target="_blank" rel="external">Quick Start Guide - ONIE</a></li>
+<li><a href="https://edge-core.github.io/2017/02/09/Call-for-Support-ONIE/">Call for Support - ONIE</a></li>
+<li><a href="https://gist.github.com/pichuang/9954b7de0b8cdd66f91f933898fccf33" target="_blank" rel="external">Output about Install ONL on AS5712-54X - pichuang</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://edge-core.github.io/Deployment-Guide-ONL/" data-id="cizwpcfer0003svq4irji5fih" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/deployment/">deployment</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/onie/">onie</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/onl/">onl</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/Call-for-Support-ONL/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Call for Support - ONL</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/deployment/">deployment</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/onie/">onie</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/onl/">onl</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/support/">support</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/deployment/" style="font-size: 10px;">deployment</a> <a href="/tags/onie/" style="font-size: 20px;">onie</a> <a href="/tags/onl/" style="font-size: 20px;">onl</a> <a href="/tags/support/" style="font-size: 20px;">support</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/Deployment-Guide-ONL/">Deployment Guide - Open Network Linux, ONL</a>
+          </li>
+        
+          <li>
+            <a href="/Call-for-Support-ONL/">Call for Support - ONL</a>
+          </li>
+        
+          <li>
+            <a href="/Call-for-Support-ONIE/">Call for Support - ONIE</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Edgecore Networks<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

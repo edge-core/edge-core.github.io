@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Call for Support - ONIE | Engineer Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="ONIE is an Open Compute Project open source initiative contributed by Cumulus Networks that defines an open “install environment” for bare metal network switches.
+Open Network Install Environment, ONI">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Call for Support - ONIE">
+<meta property="og:url" content="http://edge-core.github.io/Call-for-Support-ONIE/index.html">
+<meta property="og:site_name" content="Engineer Blog">
+<meta property="og:description" content="ONIE is an Open Compute Project open source initiative contributed by Cumulus Networks that defines an open “install environment” for bare metal network switches.
+Open Network Install Environment, ONI">
+<meta property="og:updated_time" content="2017-02-09T06:00:30.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Call for Support - ONIE">
+<meta name="twitter:description" content="ONIE is an Open Compute Project open source initiative contributed by Cumulus Networks that defines an open “install environment” for bare metal network switches.
+Open Network Install Environment, ONI">
+  
+    <link rel="alternate" href="/atom.xml" title="Engineer Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-92782610-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Engineer Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Freedom, Control, Innovation</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <a id="nav-github-link" class="nav-icon" href="https://github.com/edge-core"></a>$
+        <a id="nav-linkedin-link" class="nav-icon" href="https://www.linkedin.com/company-beta/1692901"></a>$
+        <a id="nav-twitter-link" class="nav-icon" href="https://twitter.com/EdgeCoreNetwork"></a>$        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://edge-core.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Call-for-Support-ONIE" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/Call-for-Support-ONIE/" class="article-date">
+  <time datetime="2017-02-09T06:00:30.000Z" itemprop="datePublished">2017-02-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Call for Support - ONIE
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote><p>ONIE is an Open Compute Project open source initiative contributed by Cumulus Networks that defines an open “install environment” for bare metal network switches.</p>
+<footer><strong>Open Network Install Environment, ONIE</strong><cite><a href="http://onie.org/" target="_blank" rel="external">onie.org</a></cite></footer></blockquote>
+<h2 id="ONIE-Technical-Support-with-Edgecore-Networks"><a href="#ONIE-Technical-Support-with-Edgecore-Networks" class="headerlink" title="ONIE Technical Support with Edgecore Networks"></a>ONIE Technical Support with Edgecore Networks</h2><p>ONIE provide the command which help customer send the support bundle to vendor. The command name is <code>onie-support</code>. It can dump useful information of ONIE for troubleshooting and analysis Edgecore switch platform.</p>
+<p><code>onie-support</code> have more features in last updated. We suggest you download the new one from ONIE master branch. Please follow the steps below.</p>
+<h2 id="How-to-support"><a href="#How-to-support" class="headerlink" title="How to support?"></a>How to support?</h2><a id="more"></a>
+<ol>
+<li><p>Download <a href="https://raw.githubusercontent.com/opencomputeproject/onie/master/rootconf/default/bin/onie-support" target="_blank" rel="external"><code>onie-support</code> source</a></p>
+</li>
+<li><p>Put the file into ONIE via any methods (tftp/ftp/http/USB) </p>
+<ul>
+<li>Noted: command <code>wget</code> in ONIE does NOT support https</li>
+</ul>
+</li>
+<li><p>Excute script for dump informations</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sh onie-support /tmp</div></pre></td></tr></table></figure>
+</li>
+<li><p>Find tarball in /tmp/onie-support-${onie_machine}.tar.bz2</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ONIE:/ <span class="comment"># onie-support /tmp</span></div><div class="line">Success: Support tarball created: /tmp/onie-support-accton_as7712_32x.tar.bz2</div></pre></td></tr></table></figure>
+</li>
+<li><p>Please send tarball file to Edgecore Networks</p>
+</li>
+</ol>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">ONIE:/tmp <span class="comment"># onie-sysinfo</span></div><div class="line">x86_64-accton_as7712_32x-r0</div><div class="line">ONIE:/tmp <span class="comment"># ls</span></div><div class="line">onie-support</div><div class="line">ONIE:/tmp <span class="comment"># sh onie-support /tmp</span></div><div class="line">Success: Support tarball created: /tmp/onie-support-accton_as7712_32x.tar.bz2</div></pre></td></tr></table></figure>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<li><a href="http://opencompute.org/" target="_blank" rel="external">Open Compute Project - OCP</a></li>
+<li><a href="http://onie.org/" target="_blank" rel="external">Open Network Install Environment - ONIE</a></li>
+<li><a href="https://cumulusnetworks.com/" target="_blank" rel="external">Cumulus Networks</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://edge-core.github.io/Call-for-Support-ONIE/" data-id="cizwpcfeg0000svq4gnbdlm6c" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/onie/">onie</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/support/">support</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/Call-for-Support-ONL/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Call for Support - ONL
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/deployment/">deployment</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/onie/">onie</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/onl/">onl</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/support/">support</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/deployment/" style="font-size: 10px;">deployment</a> <a href="/tags/onie/" style="font-size: 20px;">onie</a> <a href="/tags/onl/" style="font-size: 20px;">onl</a> <a href="/tags/support/" style="font-size: 20px;">support</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/Deployment-Guide-ONL/">Deployment Guide - Open Network Linux, ONL</a>
+          </li>
+        
+          <li>
+            <a href="/Call-for-Support-ONL/">Call for Support - ONL</a>
+          </li>
+        
+          <li>
+            <a href="/Call-for-Support-ONIE/">Call for Support - ONIE</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Edgecore Networks<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
