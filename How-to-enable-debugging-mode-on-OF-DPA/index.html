@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Engineer Blog</title>
+  <title>How to enable debugging mode on OF-DPA | Engineer Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Edgecore Networks Engineer Blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Engineer Blog">
-<meta property="og:url" content="http://edge-core.github.io/index.html">
+  <meta name="description" content="Introduction to Broadcom OF-DPABroadcom’s OpenFlow Data Plane Abstraction (OF-DPA) is an application software component that implements an adaptation layer between OpenFlow and the Broadcom Silicon SD">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to enable debugging mode on OF-DPA">
+<meta property="og:url" content="http://edge-core.github.io/How-to-enable-debugging-mode-on-OF-DPA/index.html">
 <meta property="og:site_name" content="Engineer Blog">
-<meta property="og:description" content="Edgecore Networks Engineer Blog">
+<meta property="og:description" content="Introduction to Broadcom OF-DPABroadcom’s OpenFlow Data Plane Abstraction (OF-DPA) is an application software component that implements an adaptation layer between OpenFlow and the Broadcom Silicon SD">
+<meta property="og:updated_time" content="2017-03-08T01:09:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Engineer Blog">
-<meta name="twitter:description" content="Edgecore Networks Engineer Blog">
+<meta name="twitter:title" content="How to enable debugging mode on OF-DPA">
+<meta name="twitter:description" content="Introduction to Broadcom OF-DPABroadcom’s OpenFlow Data Plane Abstraction (OF-DPA) is an application software component that implements an adaptation layer between OpenFlow and the Broadcom Silicon SD">
   
     <link rel="alternate" href="/atom.xml" title="Engineer Blog" type="application/atom+xml">
   
@@ -79,9 +80,7 @@ ga('send', 'pageview');
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-How-to-enable-debugging-mode-on-OF-DPA" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-How-to-enable-debugging-mode-on-OF-DPA" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/How-to-enable-debugging-mode-on-OF-DPA/" class="article-date">
   <time datetime="2017-03-08T01:09:26.000Z" itemprop="datePublished">2017-03-08</time>
@@ -94,8 +93,8 @@ ga('send', 'pageview');
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/How-to-enable-debugging-mode-on-OF-DPA/">How to enable debugging mode on OF-DPA</a>
+    <h1 class="article-title" itemprop="name">
+      How to enable debugging mode on OF-DPA
     </h1>
   
 
@@ -160,177 +159,26 @@ ga('send', 'pageview');
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-Deployment-Guide-ONL" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/Deployment-Guide-ONL/" class="article-date">
-  <time datetime="2017-03-05T11:31:30.000Z" itemprop="datePublished">2017-03-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/Deployment-Guide-ONL/">Deployment Guide - Open Network Linux, ONL</a>
-    </h1>
+    <a href="/Deployment-Guide-ONL/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Deployment Guide - Open Network Linux, ONL</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <img src="https://opennetlinux.org/opennetlinux.png" width="300" height="400">
-<h2 id="Getting-Started"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started</h2><p>The all of process has 5 steps:</p>
-<ol>
-<li>Check the <a href="http://opennetlinux.org/hcl">ONL compatible switch</a></li>
-<li>Choose the <a href="http://opennetlinux.org/binaries">ONL installer version</a><ul>
-<li>Accton/Edgecore have difference CPU type<ul>
-<li>Intel - x86</li>
-<li>FreeScale - powerpc, ppc </li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Install ONL into Edgecore switch via ONIE</li>
-<li>Login ONL</li>
-<li>Do anything you want to on ONL</li>
-</ol>
-<h2 id="Preinstall-ONL"><a href="#Preinstall-ONL" class="headerlink" title="Preinstall ONL"></a>Preinstall ONL</h2><ul>
-<li><p>We suggest you that choose ONL version <a href="http://opennetlinux.org/binaries/2016.12.22.18.28.604af0c9b3dc9504870c30273ab22f2fb62746c3"><code>2016.12.22.18.28.604af0c9b3dc9504870c30273ab22f2fb62746c3</code></a> and choose <code>Debian 8</code></p>
-<ul>
-<li>For PowerPC based, use <a href="http://opennetlinux.org/binaries/2016.12.22.18.28.604af0c9b3dc9504870c30273ab22f2fb62746c3/ONL-2.0.0-ONL-OS-DEB8-2016-12-22.1828-604af0c-PPC-INSTALLED-INSTALLER">ONL-2.0.0-ONL-OS-DEB8-2016-12-22.1828-604af0c-PPC-INSTALLED-INSTALLER</a></li>
-<li>For x86 based, use <a href="http://opennetlinux.org/binaries/2016.12.22.18.28.604af0c9b3dc9504870c30273ab22f2fb62746c3/ONL-2.0.0-ONL-OS-DEB8-2016-12-22.1828-604af0c-AMD64-INSTALLED-INSTALLER">ONL-2.0.0-ONL-OS-DEB8-2016-12-22.1828-604af0c-AMD64-INSTALLED-INSTALLER</a></li>
-</ul>
-</li>
-<li><p>Download ONL installer images into USB or follow the <a href="https://github.com/opencomputeproject/onie/wiki/Quick-Start-Guide">Quick Start Guide - ONIE</a></p>
-</li>
-</ul>
-        
-          <p class="article-more-link">
-            <a href="/Deployment-Guide-ONL/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://edge-core.github.io/Deployment-Guide-ONL/" data-id="cj00a5rzq00032yq41500nps8" class="article-share-link">Share</a>
-      
-        <a href="http://edge-core.github.io/Deployment-Guide-ONL/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/deployment/">deployment</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/onie/">onie</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/onl/">onl</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
 
 
-  
-    <article id="post-Call-for-Support-ONL" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/Call-for-Support-ONL/" class="article-date">
-  <time datetime="2017-02-25T16:00:30.000Z" itemprop="datePublished">2017-02-26</time>
-</a>
-    
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/Call-for-Support-ONL/">Call for Support - ONL</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote><p>Open Network Linux is a Linux distribution for “bare metal” switches, that is, network forwarding devices built from commodity components.<br>ONL uses ONIE to install onto on-board flash memory. Open Network Linux is a part of the Open Compute Project and is a component in a growing collection of open source and commercial projects.</p>
-<footer><strong>Open Network Linux, ONL</strong><cite><a href="https://opennetlinux.org/">opennetlinux.org</a></cite></footer></blockquote>
-<h2 id="ONL-Technical-Support-with-Edgecore-Networks"><a href="#ONL-Technical-Support-with-Edgecore-Networks" class="headerlink" title="ONL Technical Support with Edgecore Networks"></a>ONL Technical Support with Edgecore Networks</h2><h2 id="How-to-support"><a href="#How-to-support" class="headerlink" title="How to support?"></a>How to support?</h2>
-        
-          <p class="article-more-link">
-            <a href="/Call-for-Support-ONL/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://edge-core.github.io/Call-for-Support-ONL/" data-id="cj00a5rzh00012yq43xufiigv" class="article-share-link">Share</a>
-      
-        <a href="http://edge-core.github.io/Call-for-Support-ONL/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/onl/">onl</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/support/">support</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Call-for-Support-ONIE" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/Call-for-Support-ONIE/" class="article-date">
-  <time datetime="2017-02-09T06:00:30.000Z" itemprop="datePublished">2017-02-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/Call-for-Support-ONIE/">Call for Support - ONIE</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote><p>ONIE is an Open Compute Project open source initiative contributed by Cumulus Networks that defines an open “install environment” for bare metal network switches.</p>
-<footer><strong>Open Network Install Environment, ONIE</strong><cite><a href="http://onie.org/">onie.org</a></cite></footer></blockquote>
-<h2 id="ONIE-Technical-Support-with-Edgecore-Networks"><a href="#ONIE-Technical-Support-with-Edgecore-Networks" class="headerlink" title="ONIE Technical Support with Edgecore Networks"></a>ONIE Technical Support with Edgecore Networks</h2><p>ONIE provide the command which help customer send the support bundle to vendor. The command name is <code>onie-support</code>. It can dump useful information of ONIE for troubleshooting and analysis Edgecore switch platform.</p>
-<p><code>onie-support</code> have more features in last updated. We suggest you download the new one from ONIE master branch. Please follow the steps below.</p>
-<h2 id="How-to-support"><a href="#How-to-support" class="headerlink" title="How to support?"></a>How to support?</h2>
-        
-          <p class="article-more-link">
-            <a href="/Call-for-Support-ONIE/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://edge-core.github.io/Call-for-Support-ONIE/" data-id="cj00a5rza00002yq4w6goobi9" class="article-share-link">Share</a>
-      
-        <a href="http://edge-core.github.io/Call-for-Support-ONIE/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/onie/">onie</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/support/">support</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
+</section>
 </section>
         
           <aside id="sidebar">
@@ -418,11 +266,13 @@ ga('send', 'pageview');
 <script>
   var disqus_shortname = 'edgecore-github';
   
+  var disqus_url = 'http://edge-core.github.io/How-to-enable-debugging-mode-on-OF-DPA/';
+  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
