@@ -513,6 +513,12 @@ body {
 #nav-github-link:before {
   content: "\f113";
 }
+#nav-youtube-link:before {
+  content: "\f167";
+}
+#nav-facebook-link:before {
+  content: "\f09a";
+}
 .article {
   margin: 50px 0;
 }

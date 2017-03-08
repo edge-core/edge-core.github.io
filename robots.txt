@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://edge-core.github.io/sitemap.xml
