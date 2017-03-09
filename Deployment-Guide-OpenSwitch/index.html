@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Deployment Guide - OpenSwitch | Engineer Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Introduction to OpenSwitchThe OpenSwitch OPX system is an innovative operating system for network systems. This information describes how it enables you to unleash new and creative ways to deploy, o">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Deployment Guide - OpenSwitch">
+<meta property="og:url" content="http://edge-core.github.io/Deployment-Guide-OpenSwitch/index.html">
+<meta property="og:site_name" content="Engineer Blog">
+<meta property="og:description" content="Introduction to OpenSwitchThe OpenSwitch OPX system is an innovative operating system for network systems. This information describes how it enables you to unleash new and creative ways to deploy, o">
+<meta property="og:image" content="https://archive.openswitch.net/logo/OpenSwitchLogo4Sticker.png">
+<meta property="og:updated_time" content="2017-03-09T16:15:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Deployment Guide - OpenSwitch">
+<meta name="twitter:description" content="Introduction to OpenSwitchThe OpenSwitch OPX system is an innovative operating system for network systems. This information describes how it enables you to unleash new and creative ways to deploy, o">
+<meta name="twitter:image" content="https://archive.openswitch.net/logo/OpenSwitchLogo4Sticker.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Engineer Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-92782610-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Engineer Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Freedom, Control, Innovation</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <a id="nav-github-link" class="nav-icon" href="https://github.com/edge-core"></a>
+        <a id="nav-linkedin-link" class="nav-icon" href="https://www.linkedin.com/company-beta/1692901"></a>
+        <a id="nav-twitter-link" class="nav-icon" href="https://twitter.com/EdgeCoreNetwork"></a>
+        <a id="nav-youtube-link" class="nav-icon" href="https://www.youtube.com/channel/UCPSKmi8_jbw_Y_7JVjxC8Rw"></a>
+        <a id="nav-facebook-link" class="nav-icon" href="https://www.facebook.com/Edge-Core-Networks-137817126099"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://edge-core.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Deployment-Guide-OpenSwitch" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/Deployment-Guide-OpenSwitch/" class="article-date">
+  <time datetime="2017-03-09T16:15:16.000Z" itemprop="datePublished">2017-03-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Deployment Guide - OpenSwitch
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="https://archive.openswitch.net/logo/OpenSwitchLogo4Sticker.png" width="300" height="400"> 
+<h2 id="Introduction-to-OpenSwitch"><a href="#Introduction-to-OpenSwitch" class="headerlink" title="Introduction to OpenSwitch"></a>Introduction to OpenSwitch</h2><blockquote><p>The OpenSwitch OPX system is an innovative operating system for network systems. This information describes how it enables you to unleash new and creative ways to deploy, orchestrate, and manage your networking, servers, and storage solutions in your data centers and enterprise environments.</p>
+<footer><strong>OpenSwitch</strong><cite><a href="http://www.openswitch.net/" target="_blank" rel="external">www.openswitch.net</a></cite></footer></blockquote>
+<h2 id="Getting-Started"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started</h2><ol>
+<li>Check Support Platform list</li>
+<li>Choose the <a href="https://archive.openswitch.net/artifacts/periodic/release/" target="_blank" rel="external">OpenSwitch installer version</a></li>
+<li>Install OpenSwitch into Edgecore switch via ONIE</li>
+<li>Login OpenSwitch</li>
+<li>Do anything you want to on OpenSwitch</li>
+</ol>
+<h2 id="Support-Platform"><a href="#Support-Platform" class="headerlink" title="Support Platform"></a>Support Platform</h2><ul>
+<li><a href="https://archive.openswitch.net/artifacts/periodic/release/ops-1.0.0-release+2017030912/as7712/" target="_blank" rel="external">Edgecore AS7712-32X</a></li>
+<li><a href="https://archive.openswitch.net/artifacts/periodic/release/ops-1.0.0-release+2017030900/as6712/" target="_blank" rel="external">Edgecore AS6712-32X</a></li>
+<li><a href="https://archive.openswitch.net/artifacts/periodic/release/ops-1.0.0-release+2017030612/as5712/" target="_blank" rel="external">Edgecore AS5712-54X</a></li>
+</ul>
+<a id="more"></a>
+<h2 id="Enter-ONIE-Rescue-Mode"><a href="#Enter-ONIE-Rescue-Mode" class="headerlink" title="Enter ONIE (Rescue Mode)"></a>Enter ONIE (Rescue Mode)</h2><ul>
+<li>Connect to console port via console cable<ul>
+<li>115200/8/n/1</li>
+</ul>
+</li>
+<li>Power-on switch</li>
+<li>Select <code>ONIE -&gt; ONIE: Rescue</code> when you see the GRUB menu</li>
+</ul>
+<h2 id="Install-OpenSwitch-Example-Edgecore-AS5712-54X"><a href="#Install-OpenSwitch-Example-Edgecore-AS5712-54X" class="headerlink" title="Install OpenSwitch (Example: Edgecore AS5712-54X)"></a>Install OpenSwitch (Example: Edgecore AS5712-54X)</h2><ul>
+<li>Install via USB<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">mkdir /tmp/onie-image</div><div class="line">mount /dev/&lt;USB Devices&gt; /tmp/onie-image</div><div class="line"><span class="built_in">cd</span> /tmp/onie-image</div><div class="line">onie-nos-install openswitch-onie-installer-x86_64-as5712_54x-ops-1.0.0-release+2017030612</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Default-Username-in-OpenSwitch"><a href="#Default-Username-in-OpenSwitch" class="headerlink" title="Default Username in OpenSwitch"></a>Default Username in OpenSwitch</h2><p><code>root</code></p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line">root@switch:~# vtysh</div><div class="line">switch# show version</div><div class="line">OpenSwitch 1.0.0 (Build: as5712-ops-1.0.0-release+2017030612)</div><div class="line">switch# show ?</div><div class="line">  aaa                Show authentication options</div><div class="line">  access-list        Access control list (ACL)</div><div class="line">  alias              Short names configured for a set of commands</div><div class="line">  arp                Show IPv4 addresses from neighbor table</div><div class="line">  autoprovisioning   Show auto provisioning status</div><div class="line">  bgp                BGP specific commands</div><div class="line">  broadview          BroadView information</div><div class="line">  copp               Show COPP information</div><div class="line">  core-dump          Display core-dump list</div><div class="line">  date               Shows system date information</div><div class="line">  debugging          Debugging Configuration</div><div class="line">  dhcp-relay         Show dhcp-relay configuration</div><div class="line">  dhcp-server        Display DHCP Server Configuration</div><div class="line">  domain-name        Display domain name</div><div class="line">  events             Display all log events</div><div class="line">  hostname           Display hostname</div><div class="line">  interface          Interface infomation</div><div class="line">  ip                 IP information</div><div class="line">  ipv6               IPv6 information</div><div class="line">  lacp               Show various LACP settings</div><div class="line">  lldp               Show various LLDP settings</div><div class="line">  logrotate          Show logrotate config parameters</div><div class="line">  mac-address-table  Show L2 MAC address table information</div><div class="line">  mirror             Configure Mirroring</div><div class="line">  ntp                Show NTP information</div><div class="line">  qos                Show QoS Configuration</div><div class="line">  radius-server      Show radius server configuration</div><div class="line">  rib                Routing Information Base</div><div class="line">  running-config     Current running configuration</div><div class="line">  session-timeout    Idle session timeout in minutes</div><div class="line">  sflow              SFLOW Configuration</div><div class="line">  sftp               SSH File Transfer Protocol</div><div class="line">  snmp               snmp configuration</div><div class="line">  snmpv3             snmp version 3 configurations</div><div class="line">  spanning-tree      Spanning-tree configuration</div><div class="line">  ssh                Show SSH configuration</div><div class="line">  startup-config     Contents of startup configuration</div><div class="line">  system             System information</div><div class="line">  tech               Display output of a predefined command sequence used by technical support</div><div class="line">  tftp-server        Display TFTP Server Configuration</div><div class="line">  version            Displays switch version</div><div class="line">  vlan               Show VLAN configuration</div><div class="line">  vlog               Display all vlogs</div><div class="line">  vrf                VRF Configuration</div></pre></td></tr></table></figure>
+<h2 id="Install-and-Booting-Output-with-AS5712-54X-and-OpenSwitch"><a href="#Install-and-Booting-Output-with-AS5712-54X-and-OpenSwitch" class="headerlink" title="Install and Booting Output with AS5712-54X and OpenSwitch"></a>Install and Booting Output with AS5712-54X and OpenSwitch</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div></pre></td><td class="code"><pre><div class="line">ONIE: Executing installer: openswitch-onie-installer-x86_64-as5712_54x-ops-1.0.0-release+2017030612</div><div class="line"></div><div class="line">OpenSwitch ONIE installer (version 1.0) for Accton AS5712 54x</div><div class="line"></div><div class="line">                          .g8&quot;&quot;8q.</div><div class="line">                        .dP&apos;    `YM.</div><div class="line">                        dM&apos;      `MM `7MMpdMAo.  .gP&quot;Ya `7MMpMMMb.</div><div class="line">                        MM        MM   MM   `Wb ,M&apos;   Yb  MM    MM</div><div class="line">   /            \       MM.      ,MP   MM    M8 8M&quot;&quot;&quot;&quot;&quot;&quot;  MM    MM</div><div class="line">  |-----    -----|      `Mb.    ,dP&apos;   MM   ,AP YM.    ,  MM    MM</div><div class="line">   \   \\  //   /         `&quot;bmmd&quot;&apos;     MMbmmd&apos;   `Mbmmd&apos;.JMML  JMML.</div><div class="line">          //                           M</div><div class="line">         //                          .JMML.        ,,                ,,</div><div class="line">        //               .M&quot;&quot;&quot;bgd                  db   mm         `7MM</div><div class="line">   /   //  \\   \       ,MI    &quot;Y                       MM           MM</div><div class="line">  |-----    -----|      `MMb.  `7M&apos;    ,A    `MF&apos;`7MM mmMMmm ,p6&quot;bo  MMpMMMb.</div><div class="line">   \            /         `YMMNq.VA   ,VAA   ,V    MM   MM  6M&apos;  OO  MM    MM</div><div class="line">                        .     `MM VA ,V  VA ,V     MM   MM  8M       MM    MM</div><div class="line">                        Mb     dM  VVV    VVV      MM   MM  YM.    , MM    MM</div><div class="line">                        P&quot;Ybmmd&quot;    W      W     .JMML. `MbmoYMbmd&apos;.JMML  JMML.</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"> --- Not previous installation found, performing a clean installation ---</div><div class="line"></div><div class="line"> --- Creating the configuration partition (#4, label OpenSwitch Conf) ---</div><div class="line">Warning: The kernel is still using the old partition table.</div><div class="line">The new table will be used at the next reboot.</div><div class="line">The operation has completed successfully.</div><div class="line"></div><div class="line"> --- Creating the diags partition (#5, label OpenSwitch Diags) ---</div><div class="line">Warning: The kernel is still using the old partition table.</div><div class="line">The new table will be used at the next reboot.</div><div class="line">The operation has completed successfully.</div><div class="line"></div><div class="line"> --- Creating the primary partition (#6, label OpenSwitch 1) ---</div><div class="line">Warning: The kernel is still using the old partition table.</div><div class="line">The new table will be used at the next reboot.</div><div class="line">The operation has completed successfully.</div><div class="line"></div><div class="line"> --- Creating the secondary partition (#7, label OpenSwitch 2) ---</div><div class="line">Warning: The kernel is still using the old partition table.</div><div class="line">The new table will be used at the next reboot.</div><div class="line">The operation has completed successfully.</div><div class="line"></div><div class="line"> --- Formatting configuration partition in ext4 ---</div><div class="line"></div><div class="line"> --- Formatting diagnostics partition in ext4 ---</div><div class="line"></div><div class="line"> --- Formatting primary partition in ext4 ---</div><div class="line"></div><div class="line"> --- Formatting secondary partition in ext4 ---</div><div class="line"></div><div class="line"> --- Populating the root filesystem at partition OpenSwitch 1 (/dev/sda6) ---</div><div class="line">742647 blocks</div><div class="line"></div><div class="line"> --- Installing OpenSwitch GRUB ---</div><div class="line">Installation finished. No error reported.</div><div class="line">...(Skip)</div><div class="line"></div><div class="line">OpenSwitch 1.0.0 switch ttyS1</div><div class="line"></div><div class="line">switch login: root</div><div class="line"></div><div class="line">                          .g8&quot;&quot;8q.</div><div class="line">                        .dP&apos;    `YM.</div><div class="line">                        dM&apos;      `MM `7MMpdMAo.  .gP&quot;Ya `7MMpMMMb.</div><div class="line">                        MM        MM   MM   `Wb ,M&apos;   Yb  MM    MM</div><div class="line">   /            \       MM.      ,MP   MM    M8 8M&quot;&quot;&quot;&quot;&quot;&quot;  MM    MM</div><div class="line">  |-----    -----|      `Mb.    ,dP&apos;   MM   ,AP YM.    ,  MM    MM</div><div class="line">   \   \\  //   /         `&quot;bmmd&quot;&apos;     MMbmmd&apos;   `Mbmmd&apos;.JMML  JMML.</div><div class="line">          //                           M</div><div class="line">         //                          .JMML.        ,,                ,,</div><div class="line">        //               .M&quot;&quot;&quot;bgd                  db   mm         `7MM</div><div class="line">   /   //  \\   \       ,MI    &quot;Y                       MM           MM</div><div class="line">  |-----    -----|      `MMb.  `7M&apos;    ,A    `MF&apos;`7MM mmMMmm ,p6&quot;bo  MMpMMMb.</div><div class="line">   \            /         `YMMNq.VA   ,VAA   ,V    MM   MM  6M&apos;  OO  MM    MM</div><div class="line">                        .     `MM VA ,V  VA ,V     MM   MM  8M       MM    MM</div><div class="line">                        Mb     dM  VVV    VVV      MM   MM  YM.    , MM    MM</div><div class="line">                        P&quot;Ybmmd&quot;    W      W     .JMML. `MbmoYMbmd&apos;.JMML  JMML.</div><div class="line"></div><div class="line">root@switch:~# vtysh</div><div class="line">switch# show version</div><div class="line">OpenSwitch 1.0.0 (Build: as5712-ops-1.0.0-release+2017030612)</div><div class="line">switch#</div></pre></td></tr></table></figure>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://github.com/open-switch/opx-docs/wiki" target="_blank" rel="external">opx-docs - OpenSwitch Github</a></li>
+<li><a href="https://archive.openswitch.net/artifacts/periodic/release/" target="_blank" rel="external">Archive - OpenSwitch</a></li>
+<li><a href="http://www.openswitch.net/" target="_blank" rel="external">OpenSwitch Official Website</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://edge-core.github.io/Deployment-Guide-OpenSwitch/" data-id="cj02lhxay00048zq4i30lvtsx" class="article-share-link">Share</a>
+      
+        <a href="http://edge-core.github.io/Deployment-Guide-OpenSwitch/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/deployment/">deployment</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/onie/">onie</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/opx/">opx</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/How-to-enable-debugging-mode-on-OF-DPA/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">How to enable debugging mode on OF-DPA</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/debug/">debug</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deployment/">deployment</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ofdpa/">ofdpa</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/onie/">onie</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/onl/">onl</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/opx/">opx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/support/">support</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/debug/" style="font-size: 10px;">debug</a> <a href="/tags/deployment/" style="font-size: 15px;">deployment</a> <a href="/tags/ofdpa/" style="font-size: 10px;">ofdpa</a> <a href="/tags/onie/" style="font-size: 20px;">onie</a> <a href="/tags/onl/" style="font-size: 20px;">onl</a> <a href="/tags/opx/" style="font-size: 10px;">opx</a> <a href="/tags/support/" style="font-size: 15px;">support</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/Deployment-Guide-OpenSwitch/">Deployment Guide - OpenSwitch</a>
+          </li>
+        
+          <li>
+            <a href="/How-to-enable-debugging-mode-on-OF-DPA/">How to enable debugging mode on OF-DPA</a>
+          </li>
+        
+          <li>
+            <a href="/Deployment-Guide-ONL/">Deployment Guide - Open Network Linux, ONL</a>
+          </li>
+        
+          <li>
+            <a href="/Call-for-Support-ONL/">Call for Support - ONL</a>
+          </li>
+        
+          <li>
+            <a href="/Call-for-Support-ONIE/">Call for Support - ONIE</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Edgecore Networks<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'edgecore-github';
+  
+  var disqus_url = 'http://edge-core.github.io/Deployment-Guide-OpenSwitch/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
