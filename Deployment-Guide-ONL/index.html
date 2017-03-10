@@ -155,7 +155,8 @@ ga('send', 'pageview');
 <li>Login ONL</li>
 <li>Do anything you want to on ONL</li>
 </ol>
-<h2 id="Preinstall-ONL"><a href="#Preinstall-ONL" class="headerlink" title="Preinstall ONL"></a>Preinstall ONL</h2><ul>
+<h2 id="Preinstall-ONL"><a href="#Preinstall-ONL" class="headerlink" title="Preinstall ONL"></a>Preinstall ONL</h2><a id="more"></a>
+<ul>
 <li><p>We suggest you that choose ONL version <a href="http://opennetlinux.org/binaries/2016.12.22.18.28.604af0c9b3dc9504870c30273ab22f2fb62746c3" target="_blank" rel="external"><code>2016.12.22.18.28.604af0c9b3dc9504870c30273ab22f2fb62746c3</code></a> and choose <code>Debian 8</code></p>
 <ul>
 <li>For PowerPC based, use <a href="http://opennetlinux.org/binaries/2016.12.22.18.28.604af0c9b3dc9504870c30273ab22f2fb62746c3/ONL-2.0.0-ONL-OS-DEB8-2016-12-22.1828-604af0c-PPC-INSTALLED-INSTALLER" target="_blank" rel="external">ONL-2.0.0-ONL-OS-DEB8-2016-12-22.1828-604af0c-PPC-INSTALLED-INSTALLER</a></li>
@@ -165,8 +166,12 @@ ga('send', 'pageview');
 <li><p>Download ONL installer images into USB or follow the <a href="https://github.com/opencomputeproject/onie/wiki/Quick-Start-Guide" target="_blank" rel="external">Quick Start Guide - ONIE</a></p>
 </li>
 </ul>
-<a id="more"></a>
 <h2 id="Enter-ONIE-Rescue-Mode"><a href="#Enter-ONIE-Rescue-Mode" class="headerlink" title="Enter ONIE (Rescue Mode)"></a>Enter ONIE (Rescue Mode)</h2><ul>
+<li>Connect to console port via console cable<ul>
+<li>115200/8/n/1</li>
+</ul>
+</li>
+<li>Power-on switch</li>
 <li>If the bootloader is GRUB<ul>
 <li>Select <code>ONIE -&gt; ONIE: Rescue</code></li>
 </ul>
@@ -178,7 +183,7 @@ ga('send', 'pageview');
 </ul>
 </li>
 </ul>
-<h2 id="Install-ONL-Example-Accton-Edgecore-AS5712-54X"><a href="#Install-ONL-Example-Accton-Edgecore-AS5712-54X" class="headerlink" title="Install ONL (Example: Accton/Edgecore AS5712-54X)"></a>Install ONL (Example: Accton/Edgecore AS5712-54X)</h2><ul>
+<h2 id="Install-ONL-Example-Edgecore-AS5712-54X"><a href="#Install-ONL-Example-Edgecore-AS5712-54X" class="headerlink" title="Install ONL (Example: Edgecore AS5712-54X)"></a>Install ONL (Example: Edgecore AS5712-54X)</h2><ul>
 <li><p>Install via HTTP</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">ifconfig eth0 &lt;IP&gt;/24</div><div class="line">route add default gw &lt;Gateway&gt;</div><div class="line"><span class="built_in">echo</span> <span class="string">"nameserver 8.8.8.8"</span> &gt; /etc/resolv.conf</div><div class="line">onie-nos-install http://opennetlinux.org/binaries/2016.12.22.18.28.604a</div><div class="line">f0c9b3dc9504870c30273ab22f2fb62746c3/ONL-2.0.0-ONL-OS-DEB8-2016-12-22.1828-604af</div><div class="line">0c-AMD64-INSTALLED-INSTALLER</div></pre></td></tr></table></figure>
 </li>
@@ -209,7 +214,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://edge-core.github.io/Deployment-Guide-ONL/" data-id="cj034iaty0004tubbx4c0ckak" class="article-share-link">Share</a>
+      <a data-url="http://edge-core.github.io/Deployment-Guide-ONL/" data-id="cj034nrio0003b0bbtcwuue2g" class="article-share-link">Share</a>
       
         <a href="http://edge-core.github.io/Deployment-Guide-ONL/#disqus_thread" class="article-comment-link">Comments</a>
       
