@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>How to install OF-DPA in Edgecore switch | Engineer Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Introduction to Broadcom OF-DPABroadcom’s OpenFlow Data Plane Abstraction (OF-DPA) is an application software component that implements an adaptation layer between OpenFlow and the Broadcom Silicon SD">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to install OF-DPA in Edgecore switch">
+<meta property="og:url" content="http://edge-core.github.io/How-to-install-OF-DPA-in-Edgecore-switch/index.html">
+<meta property="og:site_name" content="Engineer Blog">
+<meta property="og:description" content="Introduction to Broadcom OF-DPABroadcom’s OpenFlow Data Plane Abstraction (OF-DPA) is an application software component that implements an adaptation layer between OpenFlow and the Broadcom Silicon SD">
+<meta property="og:updated_time" content="2017-06-21T06:00:23.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How to install OF-DPA in Edgecore switch">
+<meta name="twitter:description" content="Introduction to Broadcom OF-DPABroadcom’s OpenFlow Data Plane Abstraction (OF-DPA) is an application software component that implements an adaptation layer between OpenFlow and the Broadcom Silicon SD">
+  
+    <link rel="alternate" href="/atom.xml" title="Engineer Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-92782610-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Engineer Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Freedom, Control, Innovation</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <a id="nav-github-link" class="nav-icon" href="https://github.com/edge-core"></a>
+        <a id="nav-linkedin-link" class="nav-icon" href="https://www.linkedin.com/company-beta/1692901"></a>
+        <a id="nav-twitter-link" class="nav-icon" href="https://twitter.com/EdgeCoreNetwork"></a>
+        <a id="nav-youtube-link" class="nav-icon" href="https://www.youtube.com/channel/UCPSKmi8_jbw_Y_7JVjxC8Rw"></a>
+        <a id="nav-facebook-link" class="nav-icon" href="https://www.facebook.com/Edge-Core-Networks-137817126099"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://edge-core.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-How-to-install-OF-DPA-in-Edgecore-switch" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/How-to-install-OF-DPA-in-Edgecore-switch/" class="article-date">
+  <time datetime="2017-06-21T06:00:23.000Z" itemprop="datePublished">2017-06-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      How to install OF-DPA in Edgecore switch
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Introduction-to-Broadcom-OF-DPA"><a href="#Introduction-to-Broadcom-OF-DPA" class="headerlink" title="Introduction to Broadcom OF-DPA"></a>Introduction to Broadcom OF-DPA</h2><p>Broadcom’s OpenFlow Data Plane Abstraction (OF-DPA) is an application software component that implements an adaptation layer between OpenFlow and the Broadcom Silicon SDK. OF-DPA enables scalable implementation of OpenFlow 1.3.4 on Broadcom switch devices.</p>
+<h2 id="Support-Platform"><a href="#Support-Platform" class="headerlink" title="Support Platform"></a>Support Platform</h2><ul>
+<li><a href="https://github.com/opencomputeproject/OpenNetworkLinux/tree/master/packages/platforms/accton" target="_blank" rel="external">ONL-enabled Edgecore switch</a><ul>
+<li>Platfrom includes x86_64 / PowerPC / ARM</li>
+<li><a href="https://edge-core.github.io/Deployment-Guide-ONL/">Deployment Guide - Open Network Linux, ONL</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="Download-OF-DPA-Package"><a href="#Download-OF-DPA-Package" class="headerlink" title="Download OF-DPA Package"></a>Download OF-DPA Package</h2><p>We provide 2 different sources:</p>
+<ul>
+<li>Private version<ul>
+<li>Please contact your sales to get it</li>
+</ul>
+</li>
+<li>Community version<ul>
+<li><a href="https://github.com/onfsdn/atrium-docs/tree/master/16A/ONOS/builds" target="_blank" rel="external">Download link</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="Install-OF-DPA-Package"><a href="#Install-OF-DPA-Package" class="headerlink" title="Install OF-DPA Package"></a>Install OF-DPA Package</h2><ol>
+<li><p>Copy OF-DPA package to switch</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">scp ofdpa_3.0.4.0+accton1.7-3-1_amd64.deb root@192.168.100.137:/mnt/onl/data/</div></pre></td></tr></table></figure>
+</li>
+<li><p>Install OF-DPA package</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dpkg -i --force-overwrite /mnt/onl/data/ofdpa_3.0.4.0+accton1.7-3-1_amd64.deb</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="Start-OFAgent"><a href="#Start-OFAgent" class="headerlink" title="Start OFAgent"></a>Start OFAgent</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">launcher ofagentapp --controller=&lt;CONTROLLER_IP&gt;:6653 --listen=&lt;SWITCH_MA1_IP&gt;:6633</div></pre></td></tr></table></figure>
+<ul>
+<li><a href="http://blog.pichuang.com.tw/ofdpa-with-onl-cheat-sheet/" target="_blank" rel="external">More OF-DPA cheat sheet</a></li>
+</ul>
+<h2 id="Stop-OFAgent"><a href="#Stop-OFAgent" class="headerlink" title="Stop OFAgent"></a>Stop OFAgent</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pkill ofagentapp</div></pre></td></tr></table></figure>
+<h2 id="List-of-CLI-instructions"><a href="#List-of-CLI-instructions" class="headerlink" title="List of CLI instructions"></a>List of CLI instructions</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">root@edgecore-networks-onl:~# /usr/bin/ofdpa/examples</div><div class="line">$ ls</div><div class="line">client_cfg_purge             client_grouptable_dump  ofdpa_mplsl3vpn.py      ofdpa_routing.py</div><div class="line">client_classcolortable_dump  client_meter_dump       ofdpa_mpls_lsr_ecmp.py  ofdpa_snake.py</div><div class="line">client_debugcomp             client_oam_dump         ofdpa_mpls_lsr.py       ofdpa_srcmac_learn.py</div><div class="line">client_debuglvl              client_port_table_dump  ofdpa_pktrx_setup.py    ofdpa_vxlan.py</div><div class="line">client_drivport              client_queue_config     ofdpa_pktrxtx.py        ofdpa_vxlan-scale.py</div><div class="line">client_drivshell             client_sflow            OFDPA_python.py</div><div class="line">client_event                 client_tunnel_dump      OFDPA_python.pyc</div><div class="line">client_flowtable_dump        ofdpa_bridging.py       _OFDPA_python.so</div></pre></td></tr></table></figure>
+<ul>
+<li>All files are in <code>/usr/bin/ofdpa/examples</code></li>
+</ul>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">root@edgecore-networks-onl:~<span class="comment"># onl-platform-show |grep "Platform Name"</span></div><div class="line">    Platform Name: x86_64-accton_as5712_54x-r0</div><div class="line"></div><div class="line">root@edgecore-networks-onl:~<span class="comment"># ls /mnt/onl/data/ofdpa_3.0.4.0+accton1.7-3-1_amd64.deb</span></div><div class="line">/mnt/onl/data/ofdpa_3.0.4.0+accton1.7-3-1_amd64.deb</div><div class="line"></div><div class="line">root@edgecore-networks-onl:~<span class="comment"># dpkg -i --force-overwrite /mnt/onl/data/ofdpa_3.0.4.0+accton1.7-3-1_amd64.deb</span></div><div class="line">(Reading database ... 18100 files and directories currently installed.)</div><div class="line">Preparing to unpack .../ofdpa_3.0.4.0+accton1.7-3-1_amd64.deb ...</div><div class="line">Unpacking ofdpa (3.0.4.0+accton1.7~3-1) over (3.0.4.0+accton1.7~3-1) ...</div><div class="line">Setting up ofdpa (3.0.4.0+accton1.7~3-1) ...</div><div class="line">/</div><div class="line">Processing triggers <span class="keyword">for</span> libc-bin (2.19-18+deb8u6) ...</div></pre></td></tr></table></figure>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://github.com/opencomputeproject/OpenNetworkLinux/tree/master/packages/platforms/accton" target="_blank" rel="external">ONL Support Platform List</a></li>
+<li><a href="https://wiki.opencord.org/display/CORD/Hardware+Switch+Installation+Guide#HardwareSwitchInstallationGuide-C2.InstallOF-DPApackage" target="_blank" rel="external">Hardware Switch Installation Guide - OpenCORD</a></li>
+<li><a href="https://github.com/onfsdn/atrium-docs/tree/master/16A/ONOS/builds" target="_blank" rel="external">OF-DPA Community Version - ONF Atrium</a></li>
+<li><a href="http://blog.pichuang.com.tw/ofdpa-with-onl-cheat-sheet/" target="_blank" rel="external">OF-DPA with ONL Cheat Sheet</a></li>
+<li><a href="https://edge-core.github.io/Deployment-Guide-ONL/">Deployment Guide - ONL</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://edge-core.github.io/How-to-install-OF-DPA-in-Edgecore-switch/" data-id="cj46lkyin0007h6q4ag192cns" class="article-share-link">Share</a>
+      
+        <a href="http://edge-core.github.io/How-to-install-OF-DPA-in-Edgecore-switch/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/how-to/">how-to</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/install/">install</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ofdpa/">ofdpa</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/onl/">onl</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/How-to-uninstall-NOS-on-Edgecore-Switches-with-ONIE/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">How to uninstall NOS on Edgecore Switches with ONIE</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/debug/">debug</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deployment/">deployment</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/how-to/">how-to</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/install/">install</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ofdpa/">ofdpa</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/onie/">onie</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/onl/">onl</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/opx/">opx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/support/">support</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/uninstall/">uninstall</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/debug/" style="font-size: 10px;">debug</a> <a href="/tags/deployment/" style="font-size: 13.33px;">deployment</a> <a href="/tags/how-to/" style="font-size: 16.67px;">how-to</a> <a href="/tags/install/" style="font-size: 10px;">install</a> <a href="/tags/ofdpa/" style="font-size: 13.33px;">ofdpa</a> <a href="/tags/onie/" style="font-size: 20px;">onie</a> <a href="/tags/onl/" style="font-size: 20px;">onl</a> <a href="/tags/opx/" style="font-size: 10px;">opx</a> <a href="/tags/support/" style="font-size: 13.33px;">support</a> <a href="/tags/uninstall/" style="font-size: 10px;">uninstall</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/How-to-install-OF-DPA-in-Edgecore-switch/">How to install OF-DPA in Edgecore switch</a>
+          </li>
+        
+          <li>
+            <a href="/How-to-uninstall-NOS-on-Edgecore-Switches-with-ONIE/">How to uninstall NOS on Edgecore Switches with ONIE</a>
+          </li>
+        
+          <li>
+            <a href="/Deployment-Guide-OpenSwitch/">Deployment Guide - OpenSwitch</a>
+          </li>
+        
+          <li>
+            <a href="/How-to-enable-debugging-mode-on-OF-DPA/">How to enable debugging mode on OF-DPA</a>
+          </li>
+        
+          <li>
+            <a href="/Deployment-Guide-ONL/">Deployment Guide - Open Network Linux, ONL</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Edgecore Networks<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'edgecore-github';
+  
+  var disqus_url = 'http://edge-core.github.io/How-to-install-OF-DPA-in-Edgecore-switch/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
