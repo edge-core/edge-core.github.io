@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://edge-core.github.io/How-to-install-OF-DPA-in-Edgecore-Switches/index.html">
 <meta property="og:site_name" content="Engineer Blog">
 <meta property="og:description" content="Introduction to Broadcom OF-DPABroadcom’s OpenFlow Data Plane Abstraction (OF-DPA) is an application software component that implements an adaptation layer between OpenFlow and the Broadcom Silicon SD">
-<meta property="og:updated_time" content="2017-06-21T06:00:23.000Z">
+<meta property="og:updated_time" content="2017-06-28T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How to install OF-DPA in Edgecore Switches">
 <meta name="twitter:description" content="Introduction to Broadcom OF-DPABroadcom’s OpenFlow Data Plane Abstraction (OF-DPA) is an application software component that implements an adaptation layer between OpenFlow and the Broadcom Silicon SD">
@@ -132,8 +132,9 @@ ga('send', 'pageview');
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dpkg -i --force-overwrite /mnt/onl/data/ofdpa_3.0.4.0+accton1.7-3-1_amd64.deb</div></pre></td></tr></table></figure>
 </li>
 </ol>
-<h2 id="Start-OFAgent"><a href="#Start-OFAgent" class="headerlink" title="Start OFAgent"></a>Start OFAgent</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">launcher ofagentapp --controller=&lt;CONTROLLER_IP&gt;:6653 --listen=&lt;SWITCH_MA1_IP&gt;:6633</div></pre></td></tr></table></figure>
+<h2 id="Start-OFAgent"><a href="#Start-OFAgent" class="headerlink" title="Start OFAgent"></a>Start OFAgent</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service ofagentd restart</div></pre></td></tr></table></figure>
 <ul>
+<li>The configuration of ofagentapp is at <code>/etc/ofagent/ofagent.conf</code></li>
 <li><a href="http://blog.pichuang.com.tw/ofdpa-with-onl-cheat-sheet/" target="_blank" rel="external">More OF-DPA cheat sheet</a></li>
 <li><a href="https://edge-core.github.io/How-to-enable-debugging-mode-on-OF-DPA/">How to enable debugging mode on OF-DPA</a></li>
 <li><a href="http://blog.pichuang.com.tw/ovs-ofctl-and-ofdpa/" target="_blank" rel="external">OpenvSwitch ovs-ofctl and OF-DPA</a></li>
@@ -155,7 +156,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://edge-core.github.io/How-to-install-OF-DPA-in-Edgecore-Switches/" data-id="cj46sqwyk0005mwq4e5etjifz" class="article-share-link">Share</a>
+      <a data-url="http://edge-core.github.io/How-to-install-OF-DPA-in-Edgecore-Switches/" data-id="cj4h6ymt80003b4q4qd7w9qby" class="article-share-link">Share</a>
       
         <a href="http://edge-core.github.io/How-to-install-OF-DPA-in-Edgecore-Switches/#disqus_thread" class="article-comment-link">Comments</a>
       
