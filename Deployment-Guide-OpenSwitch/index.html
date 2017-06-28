@@ -5,17 +5,17 @@
   
   <title>Deployment Guide - OpenSwitch | Engineer Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Introduction to OpenSwitchThe OpenSwitch OPX system is an innovative operating system for network systems. This information describes how it enables you to unleash new and creative ways to deploy, or">
+  <meta name="description" content="Introduction to OpenSwitchThe OpenSwitch OPS system is an innovative operating system for network systems. This information describes how it enables you to unleash new and creative ways to deploy, or">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Deployment Guide - OpenSwitch">
 <meta property="og:url" content="http://edge-core.github.io/Deployment-Guide-OpenSwitch/index.html">
 <meta property="og:site_name" content="Engineer Blog">
-<meta property="og:description" content="Introduction to OpenSwitchThe OpenSwitch OPX system is an innovative operating system for network systems. This information describes how it enables you to unleash new and creative ways to deploy, or">
+<meta property="og:description" content="Introduction to OpenSwitchThe OpenSwitch OPS system is an innovative operating system for network systems. This information describes how it enables you to unleash new and creative ways to deploy, or">
 <meta property="og:image" content="https://archive.openswitch.net/logo/OpenSwitchLogo4Sticker.png">
 <meta property="og:updated_time" content="2017-03-19T16:15:16.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Deployment Guide - OpenSwitch">
-<meta name="twitter:description" content="Introduction to OpenSwitchThe OpenSwitch OPX system is an innovative operating system for network systems. This information describes how it enables you to unleash new and creative ways to deploy, or">
+<meta name="twitter:description" content="Introduction to OpenSwitchThe OpenSwitch OPS system is an innovative operating system for network systems. This information describes how it enables you to unleash new and creative ways to deploy, or">
 <meta name="twitter:image" content="https://archive.openswitch.net/logo/OpenSwitchLogo4Sticker.png">
   
     <link rel="alternate" href="/atom.xml" title="Engineer Blog" type="application/atom+xml">
@@ -107,19 +107,17 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
         <p><br><br><img src="https://archive.openswitch.net/logo/OpenSwitchLogo4Sticker.png" width="300" height="400"><br><br></p>
-<h2 id="Introduction-to-OpenSwitch"><a href="#Introduction-to-OpenSwitch" class="headerlink" title="Introduction to OpenSwitch"></a>Introduction to OpenSwitch</h2><blockquote><p>The OpenSwitch OPX system is an innovative operating system for network systems. This information describes how it enables you to unleash new and creative ways to deploy, orchestrate, and manage your networking, servers, and storage solutions in your data centers and enterprise environments.</p>
+<h2 id="Introduction-to-OpenSwitch"><a href="#Introduction-to-OpenSwitch" class="headerlink" title="Introduction to OpenSwitch"></a>Introduction to OpenSwitch</h2><blockquote><p>The OpenSwitch OPS system is an innovative operating system for network systems. This information describes how it enables you to unleash new and creative ways to deploy, orchestrate, and manage your networking, servers, and storage solutions in your data centers and enterprise environments.</p>
 <footer><strong>OpenSwitch</strong><cite><a href="http://www.openswitch.net/" target="_blank" rel="external">www.openswitch.net</a></cite></footer></blockquote>
 <h2 id="Getting-Started"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started</h2><ol>
 <li>Check Support Platform list</li>
 <li>Choose the <a href="https://archive.openswitch.net/artifacts/periodic/release/" target="_blank" rel="external">OpenSwitch installer version</a></li>
-<li>Install OpenSwitch into Edgecore switch via ONIE</li>
+<li>Install OpenSwitch OPS into Edgecore switch via ONIE</li>
 <li>Login OpenSwitch</li>
 <li>Do anything you want to on OpenSwitch</li>
 </ol>
 <h2 id="Support-Platform"><a href="#Support-Platform" class="headerlink" title="Support Platform"></a>Support Platform</h2><ul>
-<li><a href="https://archive.openswitch.net/artifacts/periodic/release/ops-1.0.0-release+2017030912/as7712/" target="_blank" rel="external">Edgecore AS7712-32X</a></li>
-<li><a href="https://archive.openswitch.net/artifacts/periodic/release/ops-1.0.0-release+2017030900/as6712/" target="_blank" rel="external">Edgecore AS6712-32X</a></li>
-<li><a href="https://archive.openswitch.net/artifacts/periodic/release/ops-1.0.0-release+2017030612/as5712/" target="_blank" rel="external">Edgecore AS5712-54X</a></li>
+<li><a href="https://archive.openswitch.net/artifacts/periodic/release/latest/" target="_blank" rel="external">Edgecore AS5712-54X</a></li>
 </ul>
 <h2 id="Enter-ONIE-Rescue-Mode"><a href="#Enter-ONIE-Rescue-Mode" class="headerlink" title="Enter ONIE (Rescue Mode)"></a>Enter ONIE (Rescue Mode)</h2><ul>
 <li>Connect to console port via console cable<ul>
@@ -131,7 +129,7 @@ ga('send', 'pageview');
 </ul>
 <h2 id="Install-OpenSwitch-Example-Edgecore-AS5712-54X"><a href="#Install-OpenSwitch-Example-Edgecore-AS5712-54X" class="headerlink" title="Install OpenSwitch (Example: Edgecore AS5712-54X)"></a>Install OpenSwitch (Example: Edgecore AS5712-54X)</h2><a id="more"></a>
 <ul>
-<li>Install via USB<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">mkdir /tmp/onie-image</div><div class="line">mount /dev/&lt;USB Devices&gt; /tmp/onie-image</div><div class="line"><span class="built_in">cd</span> /tmp/onie-image</div><div class="line">onie-nos-install openswitch-onie-installer-x86_64-as5712_54x-ops-1.0.0-release+2017030612</div></pre></td></tr></table></figure>
+<li>Install via USB<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">mkdir /tmp/onie-image</div><div class="line">mount /dev/&lt;USB Devices&gt; /tmp/onie-image</div><div class="line"><span class="built_in">cd</span> /tmp/onie-image</div><div class="line">onie-nos-install openswitch-onie-installer-x86_64-as5712_54x-ops-1.0.0-release+*</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="Default-Username-in-OpenSwitch"><a href="#Default-Username-in-OpenSwitch" class="headerlink" title="Default Username in OpenSwitch"></a>Default Username in OpenSwitch</h2><p><code>root</code></p>
@@ -147,7 +145,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://edge-core.github.io/Deployment-Guide-OpenSwitch/" data-id="cj4h71uc00004kjq4cyivqtkl" class="article-share-link">Share</a>
+      <a data-url="http://edge-core.github.io/Deployment-Guide-OpenSwitch/" data-id="cj4h79aab00045aq4n50thy8e" class="article-share-link">Share</a>
       
         <a href="http://edge-core.github.io/Deployment-Guide-OpenSwitch/#disqus_thread" class="article-comment-link">Comments</a>
       
