@@ -2,13 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://edge-core.github.io/How-to-perform-ONIE-recovery-Installation/</loc>
-    
-    <lastmod>2017-06-30T01:45:41.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://edge-core.github.io/How-to-install-OF-DPA-in-Edgecore-Switches/</loc>
     
     <lastmod>2017-06-28T16:00:00.000Z</lastmod>
