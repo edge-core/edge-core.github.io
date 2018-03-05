@@ -185,7 +185,7 @@ ga('send', 'pageview');
 </ul>
 <h2 id="Install-ONL-Example-Edgecore-AS5712-54X"><a href="#Install-ONL-Example-Edgecore-AS5712-54X" class="headerlink" title="Install ONL (Example: Edgecore AS5712-54X)"></a>Install ONL (Example: Edgecore AS5712-54X)</h2><ul>
 <li><p>Install via HTTP</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">ifconfig eth0 &lt;IP&gt;/24</div><div class="line">route add default gw &lt;Gateway&gt;</div><div class="line"><span class="built_in">echo</span> <span class="string">"nameserver 8.8.8.8"</span> &gt; /etc/resolv.conf</div><div class="line">onie-nos-install http://opennetlinux.org/binaries/2016.12.22.18.28.604a</div><div class="line">f0c9b3dc9504870c30273ab22f2fb62746c3/ONL-2.0.0-ONL-OS-DEB8-2016-12-22.1828-604af</div><div class="line">0c-AMD64-INSTALLED-INSTALLER</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">ifconfig eth0 &lt;IP&gt;/&lt;Netmask&gt;</div><div class="line">route add default gw &lt;Gateway&gt;</div><div class="line"><span class="built_in">echo</span> <span class="string">"nameserver 8.8.8.8"</span> &gt; /etc/resolv.conf</div><div class="line">onie-nos-install http://opennetlinux.org/binaries/2016.12.22.18.28.604a</div><div class="line">f0c9b3dc9504870c30273ab22f2fb62746c3/ONL-2.0.0-ONL-OS-DEB8-2016-12-22.1828-604af</div><div class="line">0c-AMD64-INSTALLED-INSTALLER</div></pre></td></tr></table></figure>
 </li>
 <li><p>Install via USB</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">mkdir /tmp/onie-image</div><div class="line">mount /dev/&lt;USB Devices&gt; /tmp/onie-image</div><div class="line"><span class="built_in">cd</span> /tmp/onie-image</div><div class="line">onie-nos-install ONL-2.0.0-ONL-OS-DEB8-2016-12-22.1828-604af</div><div class="line">0c-AMD64-INSTALLED-INSTALLER</div></pre></td></tr></table></figure>
@@ -214,7 +214,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://edge-core.github.io/Deployment-Guide-ONL/" data-id="cjbma9vly0003duq4u39v6guw" class="article-share-link">Share</a>
+      <a data-url="http://edge-core.github.io/Deployment-Guide-ONL/" data-id="cjedshyu3000362q4ej7b2tcj" class="article-share-link">Share</a>
       
         <a href="http://edge-core.github.io/Deployment-Guide-ONL/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -327,7 +327,7 @@ ga('send', 'pageview');
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Edgecore Networks<br>
+      &copy; 2018 Edgecore Networks<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
