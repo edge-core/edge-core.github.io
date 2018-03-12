@@ -6,11 +6,13 @@
   <title>Call for Support - ONL | Engineer Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Open Network Linux is a Linux distribution for “bare metal” switches, that is, network forwarding devices built from commodity components.ONL uses ONIE to install onto on-board flash memory. Open Netw">
+<meta name="keywords" content="support,onl">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Call for Support - ONL">
 <meta property="og:url" content="http://edge-core.github.io/Call-for-Support-ONL/index.html">
 <meta property="og:site_name" content="Engineer Blog">
 <meta property="og:description" content="Open Network Linux is a Linux distribution for “bare metal” switches, that is, network forwarding devices built from commodity components.ONL uses ONIE to install onto on-board flash memory. Open Netw">
+<meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2017-02-25T16:00:30.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Call for Support - ONL">
@@ -76,7 +78,7 @@ ga('send', 'pageview');
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://edge-core.github.io"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://edge-core.github.io"></form>
       </div>
     </div>
   </div>
@@ -105,33 +107,33 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote><p>Open Network Linux is a Linux distribution for “bare metal” switches, that is, network forwarding devices built from commodity components.<br>ONL uses ONIE to install onto on-board flash memory. Open Network Linux is a part of the Open Compute Project and is a component in a growing collection of open source and commercial projects.</p>
-<footer><strong>Open Network Linux, ONL</strong><cite><a href="https://opennetlinux.org/" target="_blank" rel="external">opennetlinux.org</a></cite></footer></blockquote>
+<footer><strong>Open Network Linux, ONL</strong><cite><a href="https://opennetlinux.org/" target="_blank" rel="noopener">opennetlinux.org</a></cite></footer></blockquote>
 <h2 id="ONL-Technical-Support-with-Edgecore-Networks"><a href="#ONL-Technical-Support-with-Edgecore-Networks" class="headerlink" title="ONL Technical Support with Edgecore Networks"></a>ONL Technical Support with Edgecore Networks</h2><h2 id="How-to-support"><a href="#How-to-support" class="headerlink" title="How to support?"></a>How to support?</h2><a id="more"></a>
 <ol>
-<li><p>Download <a href="https://raw.githubusercontent.com/pichuang/OpenNetworkLinux/b529ecf4cf4b9464328ee96181aa5168f0aa2b31/packages/base/all/vendor-config-onl/src/bin/onl-support" target="_blank" rel="external"><code>onl-support</code> source</a></p>
+<li><p>Download <a href="https://raw.githubusercontent.com/pichuang/OpenNetworkLinux/b529ecf4cf4b9464328ee96181aa5168f0aa2b31/packages/base/all/vendor-config-onl/src/bin/onl-support" target="_blank" rel="noopener"><code>onl-support</code> source</a></p>
 </li>
 <li><p>Put the file into ONL platform via <code>wget</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wget --no-check-certificate https://raw.githubusercontent.com/pichuang/OpenNetworkLinux/b529ecf4cf4b9464328ee96181aa5168f0aa2b31/packages/base/all/vendor-config-onl/src/bin/onl-support</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate https://raw.githubusercontent.com/pichuang/OpenNetworkLinux/b529ecf4cf4b9464328ee96181aa5168f0aa2b31/packages/base/all/vendor-config-onl/src/bin/onl-support</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Excute script for dump informations</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python onl-support</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python onl-support</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Find tarball in /root/onl-support-${onie_machine}.tar.bz2</p>
 </li>
 <li><p>Please send tarball file to Edgecore Networks</p>
 </li>
 </ol>
-<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">root@localhost:~<span class="comment"># wget --no-check-certificate https://raw.githubusercontent.com/pichuang/OpenNetworkLinux/b529ecf4cf4b9464328ee96181aa5168f0aa2b31/packages/base/all/vendor-config-onl/src/bin/onl-support</span></div><div class="line">root@localhost:~<span class="comment"># python onl-support</span></div><div class="line">Dump Information...</div><div class="line">Processing...</div><div class="line">Support tarball created: /root/onl-support-x86-64-accton-as6712-32x-r0.tar.gz</div></pre></td></tr></table></figure>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">root@localhost:~<span class="comment"># wget --no-check-certificate https://raw.githubusercontent.com/pichuang/OpenNetworkLinux/b529ecf4cf4b9464328ee96181aa5168f0aa2b31/packages/base/all/vendor-config-onl/src/bin/onl-support</span></span><br><span class="line">root@localhost:~<span class="comment"># python onl-support</span></span><br><span class="line">Dump Information...</span><br><span class="line">Processing...</span><br><span class="line">Support tarball created: /root/onl-support-x86-64-accton-as6712-32x-r0.tar.gz</span><br></pre></td></tr></table></figure>
 <h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
-<li><a href="http://opencompute.org/" target="_blank" rel="external">Open Compute Project - OCP</a></li>
-<li><a href="https://opennetlinux.org/" target="_blank" rel="external">Open Network Linux</a></li>
-<li><a href="http://www.bigswitch.com/blog/2016/11/21/open-network-linux-expansion" target="_blank" rel="external">Big Switch Networks - Open Network Linux Expansion</a></li>
+<li><a href="http://opencompute.org/" target="_blank" rel="noopener">Open Compute Project - OCP</a></li>
+<li><a href="https://opennetlinux.org/" target="_blank" rel="noopener">Open Network Linux</a></li>
+<li><a href="http://www.bigswitch.com/blog/2016/11/21/open-network-linux-expansion" target="_blank" rel="noopener">Big Switch Networks - Open Network Linux Expansion</a></li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://edge-core.github.io/Call-for-Support-ONL/" data-id="cjennhsxi0000baq4mc275xzq" class="article-share-link">Share</a>
+      <a data-url="http://edge-core.github.io/Call-for-Support-ONL/" data-id="cjennl3r80001fwq468h0ypce" class="article-share-link">Share</a>
       
         <a href="http://edge-core.github.io/Call-for-Support-ONL/#disqus_thread" class="article-comment-link">Comments</a>
       

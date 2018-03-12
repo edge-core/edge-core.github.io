@@ -6,11 +6,13 @@
   <title>How to install OF-DPA in Edgecore Switches | Engineer Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Introduction to Broadcom OF-DPABroadcom’s OpenFlow Data Plane Abstraction (OF-DPA) is an application software component that implements an adaptation layer between OpenFlow and the Broadcom Silicon SD">
+<meta name="keywords" content="onl,ofdpa,how-to,install">
 <meta property="og:type" content="article">
 <meta property="og:title" content="How to install OF-DPA in Edgecore Switches">
 <meta property="og:url" content="http://edge-core.github.io/How-to-install-OF-DPA-in-Edgecore-Switches/index.html">
 <meta property="og:site_name" content="Engineer Blog">
 <meta property="og:description" content="Introduction to Broadcom OF-DPABroadcom’s OpenFlow Data Plane Abstraction (OF-DPA) is an application software component that implements an adaptation layer between OpenFlow and the Broadcom Silicon SD">
+<meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2017-06-28T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How to install OF-DPA in Edgecore Switches">
@@ -76,7 +78,7 @@ ga('send', 'pageview');
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://edge-core.github.io"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://edge-core.github.io"></form>
       </div>
     </div>
   </div>
@@ -106,7 +108,7 @@ ga('send', 'pageview');
       
         <h2 id="Introduction-to-Broadcom-OF-DPA"><a href="#Introduction-to-Broadcom-OF-DPA" class="headerlink" title="Introduction to Broadcom OF-DPA"></a>Introduction to Broadcom OF-DPA</h2><p>Broadcom’s OpenFlow Data Plane Abstraction (OF-DPA) is an application software component that implements an adaptation layer between OpenFlow and the Broadcom Silicon SDK. OF-DPA enables scalable implementation of OpenFlow 1.3.4 on Broadcom switch devices.</p>
 <h2 id="Support-Platform"><a href="#Support-Platform" class="headerlink" title="Support Platform"></a>Support Platform</h2><ul>
-<li><a href="https://github.com/opencomputeproject/OpenNetworkLinux/tree/master/packages/platforms/accton" target="_blank" rel="external">ONL-enabled Edgecore switch</a><ul>
+<li><a href="https://github.com/opencomputeproject/OpenNetworkLinux/tree/master/packages/platforms/accton" target="_blank" rel="noopener">ONL-enabled Edgecore switch</a><ul>
 <li>Platfrom includes x86_64 / PowerPC / ARM</li>
 <li><a href="https://edge-core.github.io/Deployment-Guide-ONL/">Deployment Guide - Open Network Linux, ONL</a></li>
 </ul>
@@ -120,43 +122,43 @@ ga('send', 'pageview');
 </ul>
 </li>
 <li>Community version (latest: ofdpa_3.0.5.5+accton1.7-1_amd64.deb a.k.a 3.0-EA5)<ul>
-<li><a href="https://github.com/onfsdn/atrium-docs/tree/master/16A/ONOS/builds" target="_blank" rel="external">Download link</a></li>
+<li><a href="https://github.com/onfsdn/atrium-docs/tree/master/16A/ONOS/builds" target="_blank" rel="noopener">Download link</a></li>
 </ul>
 </li>
 </ul>
 <h2 id="Install-OF-DPA-Package"><a href="#Install-OF-DPA-Package" class="headerlink" title="Install OF-DPA Package"></a>Install OF-DPA Package</h2><ol>
 <li><p>Copy OF-DPA package to switch</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">scp ofdpa_3.0.5.5+accton1.7-1_amd64.deb root@192.168.100.137:/mnt/onl/data/</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp ofdpa_3.0.5.5+accton1.7-1_amd64.deb root@192.168.100.137:/mnt/onl/data/</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Install OF-DPA package</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dpkg -i --force-overwrite /mnt/onl/data/ofdpa_3.0.5.5+accton1.7-1_amd64.deb</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg -i --force-overwrite /mnt/onl/data/ofdpa_3.0.5.5+accton1.7-1_amd64.deb</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<h2 id="Start-OFAgent"><a href="#Start-OFAgent" class="headerlink" title="Start OFAgent"></a>Start OFAgent</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service ofagentd restart</div></pre></td></tr></table></figure>
+<h2 id="Start-OFAgent"><a href="#Start-OFAgent" class="headerlink" title="Start OFAgent"></a>Start OFAgent</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service ofagentd restart</span><br></pre></td></tr></table></figure>
 <ul>
 <li>The configuration of ofagentapp is at <code>/etc/ofagent/ofagent.conf</code></li>
-<li><a href="http://blog.pichuang.com.tw/ofdpa-with-onl-cheat-sheet/" target="_blank" rel="external">More OF-DPA cheat sheet</a></li>
+<li><a href="http://blog.pichuang.com.tw/ofdpa-with-onl-cheat-sheet/" target="_blank" rel="noopener">More OF-DPA cheat sheet</a></li>
 <li><a href="https://edge-core.github.io/How-to-enable-debugging-mode-on-OF-DPA/">How to enable debugging mode on OF-DPA</a></li>
-<li><a href="http://blog.pichuang.com.tw/ovs-ofctl-and-ofdpa/" target="_blank" rel="external">OpenvSwitch ovs-ofctl and OF-DPA</a></li>
+<li><a href="http://blog.pichuang.com.tw/ovs-ofctl-and-ofdpa/" target="_blank" rel="noopener">OpenvSwitch ovs-ofctl and OF-DPA</a></li>
 </ul>
-<h2 id="Stop-OFAgent"><a href="#Stop-OFAgent" class="headerlink" title="Stop OFAgent"></a>Stop OFAgent</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service ofagentd stop</div></pre></td></tr></table></figure>
-<h2 id="List-of-CLI-instructions"><a href="#List-of-CLI-instructions" class="headerlink" title="List of CLI instructions"></a>List of CLI instructions</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">root@edgecore-networks-onl:~# /usr/bin/ofdpa/examples</div><div class="line">$ ls</div><div class="line">client_cfg_purge             client_grouptable_dump  ofdpa_mplsl3vpn.py      ofdpa_routing.py</div><div class="line">client_classcolortable_dump  client_meter_dump       ofdpa_mpls_lsr_ecmp.py  ofdpa_snake.py</div><div class="line">client_debugcomp             client_oam_dump         ofdpa_mpls_lsr.py       ofdpa_srcmac_learn.py</div><div class="line">client_debuglvl              client_port_table_dump  ofdpa_pktrx_setup.py    ofdpa_vxlan.py</div><div class="line">client_drivport              client_queue_config     ofdpa_pktrxtx.py        ofdpa_vxlan-scale.py</div><div class="line">client_drivshell             client_sflow            OFDPA_python.py</div><div class="line">client_event                 client_tunnel_dump      OFDPA_python.pyc</div><div class="line">client_flowtable_dump        ofdpa_bridging.py       _OFDPA_python.so</div></pre></td></tr></table></figure>
+<h2 id="Stop-OFAgent"><a href="#Stop-OFAgent" class="headerlink" title="Stop OFAgent"></a>Stop OFAgent</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service ofagentd stop</span><br></pre></td></tr></table></figure>
+<h2 id="List-of-CLI-instructions"><a href="#List-of-CLI-instructions" class="headerlink" title="List of CLI instructions"></a>List of CLI instructions</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">root@edgecore-networks-onl:~# /usr/bin/ofdpa/examples</span><br><span class="line">$ ls</span><br><span class="line">client_cfg_purge             client_grouptable_dump  ofdpa_mplsl3vpn.py      ofdpa_routing.py</span><br><span class="line">client_classcolortable_dump  client_meter_dump       ofdpa_mpls_lsr_ecmp.py  ofdpa_snake.py</span><br><span class="line">client_debugcomp             client_oam_dump         ofdpa_mpls_lsr.py       ofdpa_srcmac_learn.py</span><br><span class="line">client_debuglvl              client_port_table_dump  ofdpa_pktrx_setup.py    ofdpa_vxlan.py</span><br><span class="line">client_drivport              client_queue_config     ofdpa_pktrxtx.py        ofdpa_vxlan-scale.py</span><br><span class="line">client_drivshell             client_sflow            OFDPA_python.py</span><br><span class="line">client_event                 client_tunnel_dump      OFDPA_python.pyc</span><br><span class="line">client_flowtable_dump        ofdpa_bridging.py       _OFDPA_python.so</span><br></pre></td></tr></table></figure>
 <ul>
 <li>All files are in <code>/usr/bin/ofdpa/examples</code></li>
 </ul>
-<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">root@edgecore-networks-onl:~<span class="comment"># onl-platform-show |grep "Platform Name"</span></div><div class="line">    Platform Name: x86_64-accton_as5712_54x-r0</div><div class="line"></div><div class="line">root@edgecore-networks-onl:~<span class="comment"># ls /mnt/onl/data/ofdpa_3.0.4.0+accton1.7-3-1_amd64.deb</span></div><div class="line">/mnt/onl/data/ofdpa_3.0.4.0+accton1.7-3-1_amd64.deb</div><div class="line"></div><div class="line">root@edgecore-networks-onl:~<span class="comment"># dpkg -i --force-overwrite /mnt/onl/data/ofdpa_3.0.4.0+accton1.7-3-1_amd64.deb</span></div><div class="line">(Reading database ... 18100 files and directories currently installed.)</div><div class="line">Preparing to unpack .../ofdpa_3.0.4.0+accton1.7-3-1_amd64.deb ...</div><div class="line">Unpacking ofdpa (3.0.4.0+accton1.7~3-1) over (3.0.4.0+accton1.7~3-1) ...</div><div class="line">Setting up ofdpa (3.0.4.0+accton1.7~3-1) ...</div><div class="line">/</div><div class="line">Processing triggers <span class="keyword">for</span> libc-bin (2.19-18+deb8u6) ...</div></pre></td></tr></table></figure>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">root@edgecore-networks-onl:~<span class="comment"># onl-platform-show |grep "Platform Name"</span></span><br><span class="line">    Platform Name: x86_64-accton_as5712_54x-r0</span><br><span class="line"></span><br><span class="line">root@edgecore-networks-onl:~<span class="comment"># ls /mnt/onl/data/ofdpa_3.0.4.0+accton1.7-3-1_amd64.deb</span></span><br><span class="line">/mnt/onl/data/ofdpa_3.0.4.0+accton1.7-3-1_amd64.deb</span><br><span class="line"></span><br><span class="line">root@edgecore-networks-onl:~<span class="comment"># dpkg -i --force-overwrite /mnt/onl/data/ofdpa_3.0.4.0+accton1.7-3-1_amd64.deb</span></span><br><span class="line">(Reading database ... 18100 files and directories currently installed.)</span><br><span class="line">Preparing to unpack .../ofdpa_3.0.4.0+accton1.7-3-1_amd64.deb ...</span><br><span class="line">Unpacking ofdpa (3.0.4.0+accton1.7~3-1) over (3.0.4.0+accton1.7~3-1) ...</span><br><span class="line">Setting up ofdpa (3.0.4.0+accton1.7~3-1) ...</span><br><span class="line">/</span><br><span class="line">Processing triggers <span class="keyword">for</span> libc-bin (2.19-18+deb8u6) ...</span><br></pre></td></tr></table></figure>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://github.com/opencomputeproject/OpenNetworkLinux/tree/master/packages/platforms/accton" target="_blank" rel="external">ONL Support Platform List</a></li>
-<li><a href="https://wiki.opencord.org/display/CORD/Hardware+Switch+Installation+Guide#HardwareSwitchInstallationGuide-C2.InstallOF-DPApackage" target="_blank" rel="external">Hardware Switch Installation Guide - OpenCORD</a></li>
-<li><a href="https://github.com/onfsdn/atrium-docs/tree/master/16A/ONOS/builds" target="_blank" rel="external">OF-DPA Community Version - ONF Atrium</a></li>
-<li><a href="http://blog.pichuang.com.tw/ofdpa-with-onl-cheat-sheet/" target="_blank" rel="external">OF-DPA with ONL Cheat Sheet</a></li>
+<li><a href="https://github.com/opencomputeproject/OpenNetworkLinux/tree/master/packages/platforms/accton" target="_blank" rel="noopener">ONL Support Platform List</a></li>
+<li><a href="https://wiki.opencord.org/display/CORD/Hardware+Switch+Installation+Guide#HardwareSwitchInstallationGuide-C2.InstallOF-DPApackage" target="_blank" rel="noopener">Hardware Switch Installation Guide - OpenCORD</a></li>
+<li><a href="https://github.com/onfsdn/atrium-docs/tree/master/16A/ONOS/builds" target="_blank" rel="noopener">OF-DPA Community Version - ONF Atrium</a></li>
+<li><a href="http://blog.pichuang.com.tw/ofdpa-with-onl-cheat-sheet/" target="_blank" rel="noopener">OF-DPA with ONL Cheat Sheet</a></li>
 <li><a href="https://edge-core.github.io/Deployment-Guide-ONL/">Deployment Guide - ONL</a></li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://edge-core.github.io/How-to-install-OF-DPA-in-Edgecore-Switches/" data-id="cjennhsxt0007baq4njgxe5t6" class="article-share-link">Share</a>
+      <a data-url="http://edge-core.github.io/How-to-install-OF-DPA-in-Edgecore-Switches/" data-id="cjennl3rn0005fwq46eutuxn5" class="article-share-link">Share</a>
       
         <a href="http://edge-core.github.io/How-to-install-OF-DPA-in-Edgecore-Switches/#disqus_thread" class="article-comment-link">Comments</a>
       

@@ -5,19 +5,18 @@
   
   <title>Call for Support - ONIE | Engineer Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ONIE is an Open Compute Project open source initiative contributed by Cumulus Networks that defines an open “install environment” for bare metal network switches.
-Open Network Install Environment, ONI">
+  <meta name="description" content="ONIE is an Open Compute Project open source initiative contributed by Cumulus Networks that defines an open “install environment” for bare metal network switches. Open Network Install Environment, ONI">
+<meta name="keywords" content="onie,support">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Call for Support - ONIE">
 <meta property="og:url" content="http://edge-core.github.io/Call-for-Support-ONIE/index.html">
 <meta property="og:site_name" content="Engineer Blog">
-<meta property="og:description" content="ONIE is an Open Compute Project open source initiative contributed by Cumulus Networks that defines an open “install environment” for bare metal network switches.
-Open Network Install Environment, ONI">
+<meta property="og:description" content="ONIE is an Open Compute Project open source initiative contributed by Cumulus Networks that defines an open “install environment” for bare metal network switches. Open Network Install Environment, ONI">
+<meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2017-02-09T06:00:30.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Call for Support - ONIE">
-<meta name="twitter:description" content="ONIE is an Open Compute Project open source initiative contributed by Cumulus Networks that defines an open “install environment” for bare metal network switches.
-Open Network Install Environment, ONI">
+<meta name="twitter:description" content="ONIE is an Open Compute Project open source initiative contributed by Cumulus Networks that defines an open “install environment” for bare metal network switches. Open Network Install Environment, ONI">
   
     <link rel="alternate" href="/atom.xml" title="Engineer Blog" type="application/atom+xml">
   
@@ -79,7 +78,7 @@ ga('send', 'pageview');
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://edge-core.github.io"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://edge-core.github.io"></form>
       </div>
     </div>
   </div>
@@ -108,12 +107,12 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote><p>ONIE is an Open Compute Project open source initiative contributed by Cumulus Networks that defines an open “install environment” for bare metal network switches.</p>
-<footer><strong>Open Network Install Environment, ONIE</strong><cite><a href="http://onie.org/" target="_blank" rel="external">onie.org</a></cite></footer></blockquote>
+<footer><strong>Open Network Install Environment, ONIE</strong><cite><a href="http://onie.org/" target="_blank" rel="noopener">onie.org</a></cite></footer></blockquote>
 <h2 id="ONIE-Technical-Support-with-Edgecore-Networks"><a href="#ONIE-Technical-Support-with-Edgecore-Networks" class="headerlink" title="ONIE Technical Support with Edgecore Networks"></a>ONIE Technical Support with Edgecore Networks</h2><p>ONIE provide the command which help customer send the support bundle to vendor. The command name is <code>onie-support</code>. It can dump useful information of ONIE for troubleshooting and analysis Edgecore switch platform.</p>
 <p><code>onie-support</code> have more features in last updated. We suggest you download the new one from ONIE master branch. Please follow the steps below.</p>
 <h2 id="How-to-support"><a href="#How-to-support" class="headerlink" title="How to support?"></a>How to support?</h2><a id="more"></a>
 <ol>
-<li><p>Download <a href="https://raw.githubusercontent.com/opencomputeproject/onie/master/rootconf/default/bin/onie-support" target="_blank" rel="external"><code>onie-support</code> source</a></p>
+<li><p>Download <a href="https://raw.githubusercontent.com/opencomputeproject/onie/master/rootconf/default/bin/onie-support" target="_blank" rel="noopener"><code>onie-support</code> source</a></p>
 </li>
 <li><p>Put the file into ONIE via any methods (tftp/ftp/http/USB) </p>
 <ul>
@@ -121,25 +120,25 @@ ga('send', 'pageview');
 </ul>
 </li>
 <li><p>Excute script for dump informations</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sh onie-support /tmp</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh onie-support /tmp</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Find tarball in /tmp/onie-support-${onie_machine}.tar.bz2</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ONIE:/ <span class="comment"># onie-support /tmp</span></div><div class="line">Success: Support tarball created: /tmp/onie-support-accton_as7712_32x.tar.bz2</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ONIE:/ <span class="comment"># onie-support /tmp</span></span><br><span class="line">Success: Support tarball created: /tmp/onie-support-accton_as7712_32x.tar.bz2</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Please send tarball file to Edgecore Networks</p>
 </li>
 </ol>
-<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">ONIE:/tmp <span class="comment"># onie-sysinfo</span></div><div class="line">x86_64-accton_as7712_32x-r0</div><div class="line">ONIE:/tmp <span class="comment"># ls</span></div><div class="line">onie-support</div><div class="line">ONIE:/tmp <span class="comment"># sh onie-support /tmp</span></div><div class="line">Success: Support tarball created: /tmp/onie-support-accton_as7712_32x.tar.bz2</div></pre></td></tr></table></figure>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ONIE:/tmp <span class="comment"># onie-sysinfo</span></span><br><span class="line">x86_64-accton_as7712_32x-r0</span><br><span class="line">ONIE:/tmp <span class="comment"># ls</span></span><br><span class="line">onie-support</span><br><span class="line">ONIE:/tmp <span class="comment"># sh onie-support /tmp</span></span><br><span class="line">Success: Support tarball created: /tmp/onie-support-accton_as7712_32x.tar.bz2</span><br></pre></td></tr></table></figure>
 <h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
-<li><a href="http://opencompute.org/" target="_blank" rel="external">Open Compute Project - OCP</a></li>
-<li><a href="http://onie.org/" target="_blank" rel="external">Open Network Install Environment - ONIE</a></li>
-<li><a href="https://cumulusnetworks.com/" target="_blank" rel="external">Cumulus Networks</a></li>
+<li><a href="http://opencompute.org/" target="_blank" rel="noopener">Open Compute Project - OCP</a></li>
+<li><a href="http://onie.org/" target="_blank" rel="noopener">Open Network Install Environment - ONIE</a></li>
+<li><a href="https://cumulusnetworks.com/" target="_blank" rel="noopener">Cumulus Networks</a></li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://edge-core.github.io/Call-for-Support-ONIE/" data-id="cjennhsxm0001baq4gbx2ykl0" class="article-share-link">Share</a>
+      <a data-url="http://edge-core.github.io/Call-for-Support-ONIE/" data-id="cjennl3r00000fwq4ikvndcw7" class="article-share-link">Share</a>
       
         <a href="http://edge-core.github.io/Call-for-Support-ONIE/#disqus_thread" class="article-comment-link">Comments</a>
       
